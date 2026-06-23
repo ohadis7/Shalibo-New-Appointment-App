@@ -1,47 +1,36 @@
 FROM alextselegidis/easyappointments:latest
 
-# ── 1. Booking wizard — brand CSS + header logo injection ───────
-COPY custom.css        /var/www/html/assets/css/custom.css
-COPY booking-inject.js /var/www/html/assets/js/booking-inject.js
+# ── Shalibo Wellness — Custom EA Image ──
+# Clean build: only copies the specific files we customized.
+# The base image provides all EA source files; we just overlay our changes.
+# No sed/php runtime injections — all edits are in the actual source files.
+#
+# Custom assets:
+#   assets/css/custom.css         — Booking page theme
+#   assets/css/login-override.css — Admin login page redesign
+#   assets/js/booking-inject.js   — Logo injection + provider filter + multi-service filter
+#   assets/js/login-inject.js     — Login page UI enhancer
+#   landing.html                  — Service hub landing page
+#
+# View edits:
+#   application/views/layouts/booking_layout.php  — Added CSS/JS includes + redirect script
+#   application/views/pages/login.php              — Added CSS/JS includes
+# ────────────────────────────────────────────────────
 
-# ── Redirect root booking page to landing.html when no ?service/?provider ──
-# Inject INLINE script early in <head> — runs before any rendering.
-# If neither "service" nor "provider" is in the URL query-string, the visitor
-# is sent to the hub landing page (/landing.html) immediately.
-RUN python3 -c "
-f = '/var/www/html/application/views/layouts/booking_layout.php'
-c = open(f).read()
-script = '<script>(function(){var p=new URLSearchParams(location.search);if(!p.get(\"service\")&&!p.get(\"provider\")){location.replace(\"/landing.html\");}})();</script>'
-c = c.replace('<head>', '<head>' + script, 1)
-open(f,'w').write(c)
-" || true
+# Copy custom assets (new files added alongside EA's existing assets)
+COPY ea/assets/css/custom.css         /var/www/html/assets/css/custom.css
+COPY ea/assets/css/login-override.css /var/www/html/assets/css/login-override.css
+COPY ea/assets/js/booking-inject.js   /var/www/html/assets/js/booking-inject.js
+COPY ea/assets/js/login-inject.js     /var/www/html/assets/js/login-inject.js
+COPY ea/landing.html                  /var/www/html/landing.html
 
-# Inject CSS into booking page <head>
-RUN sed -i 's|</head>|<link rel="stylesheet" href="/assets/css/custom.css">\n</head>|g' \
-    /var/www/html/application/views/layouts/booking_layout.php || true
+# Copy modified view files (overlay on top of EA's originals)
+COPY ea/application/views/layouts/booking_layout.php /var/www/html/application/views/layouts/booking_layout.php
+COPY ea/application/views/pages/login.php             /var/www/html/application/views/pages/login.php
 
-# Inject JS at bottom of booking page <body>
-# — replaces service name in header with Shalibo Wellness logo
-RUN sed -i 's|</body>|<script src="/assets/js/booking-inject.js"></script>\n</body>|g' \
-    /var/www/html/application/views/layouts/booking_layout.php || true
-
-# ── 2. Admin login page — beautiful redesign ────────────────────
-COPY login-override.css /var/www/html/assets/css/login-override.css
-COPY login-inject.js    /var/www/html/assets/js/login-inject.js
-
-# Inject CSS into the admin login page head
-RUN sed -i 's|</head>|<link rel="stylesheet" href="/assets/css/login-override.css">\n</head>|g' \
-    /var/www/html/application/views/user/login.php || true
-
-# Inject JS at bottom of admin login page body
-RUN sed -i 's|</body>|<script src="/assets/js/login-inject.js"></script>\n</body>|g' \
-    /var/www/html/application/views/user/login.php || true
-
-# ── 3. Booking hub landing page ─────────────────────────────────
-# Accessible at: https://booking.shalibowellness.com/landing.html
-# Share this URL as the main entry point for all clients.
-# Each service card links to its dedicated ?service=ID&provider=ID URL.
-COPY landing.html /var/www/html/landing.html
-
-# ── Debug: list login template location ─────────────────────────
-RUN find /var/www/html -name "login.php" 2>/dev/null
+# Set correct ownership
+RUN chown -R www-data:www-data /var/www/html/assets/css/custom.css \
+    /var/www/html/assets/css/login-override.css \
+    /var/www/html/assets/js/booking-inject.js \
+    /var/www/html/assets/js/login-inject.js \
+    /var/www/html/landing.html

@@ -1,0 +1,31 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Config — built by the official image from env vars at startup
+ea/config.php
+
+# Storage — runtime logs, not needed in image
+ea/storage/logs/
+
+# Node / npm — not needed at runtime
+node_modules
+ea/node_modules
+.npm
+
+# Development files
+*.md
+*.ps1
+*.zip
+*.tar.gz
+.dockerignore
+README.md
+CHANGELOG.md
+
+# Composer — vendor already included in official image
+ea/vendor/
+
+# Tests
+ea/tests/
+ea/phpunit.xml
