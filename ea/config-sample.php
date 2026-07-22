@@ -53,4 +53,20 @@ class Config
     // const GOOGLE_SYNC_FEATURE = false;
     // const GOOGLE_CLIENT_ID = '';
     // const GOOGLE_CLIENT_SECRET = '';
+
+    // ------------------------------------------------------------------------
+    // MONGODB CONNECTOR (Optional - Shalibo Wellness)
+    // ------------------------------------------------------------------------
+    // MongoDB connection for provider email resolution.
+    // When configured, allows multiple EA providers to use the same email address
+    // by storing email-to-provider mappings in MongoDB and checking for duplicates
+    // at validation time. If a matching email is found in MongoDB, the duplicate
+    // is allowed and data is merged.
+    //
+    // Connection URI (standard MongoDB connection string):
+    //   mongodb://localhost:27017/mydb
+    //   mongodb+srv://user:pass@cluster.mongodb.net/mydb
+    //
+    const MONGODB_URI = '';
+    const MONGODB_DATABASE = 'heroku_zcsmsvgj';
 }

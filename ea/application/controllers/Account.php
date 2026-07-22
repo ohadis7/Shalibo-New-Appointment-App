@@ -131,8 +131,8 @@ class Account extends EA_Controller
 
             $this->users_model->optional($account['settings'], $this->optional_user_setting_fields);
 
-            if (empty($account['password'])) {
-                unset($account['password']);
+            if (empty($account['settings']['password'])) {
+                unset($account['settings']['password']);
             }
 
             $this->users_model->save($account);

@@ -492,3 +492,4 @@ $config['rate_limiting'] = true;
 
 /* End of file config.php */
 /* Location: ./application/config/config.php */
+// base_url is set dynamically above from $_SERVER['HTTP_HOST'] — do NOT hardcode it

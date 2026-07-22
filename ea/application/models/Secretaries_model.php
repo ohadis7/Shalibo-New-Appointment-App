@@ -373,7 +373,7 @@ class Secretaries_model extends EA_Model
 
         unset($secretary['providers'], $secretary['settings']);
 
-        if (isset($settings['password'])) {
+        if (!empty($settings['password'])) {
             $existing_settings = $this->db->get_where('user_settings', ['id_users' => $secretary['id']])->row_array();
 
             if (empty($existing_settings)) {

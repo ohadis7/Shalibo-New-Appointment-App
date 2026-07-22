@@ -298,7 +298,7 @@ class Email_messages
             $php_mailer->AltBody = $plain_text;
         }
 
-        $php_mailer->addEmbeddedImage(FCPATH . 'assets/img/logo.png', 'logo.png', 'logo.png', 'base64', 'image/png');
+        $php_mailer->addEmbeddedImage(FCPATH . 'assets/img/shalibo-logo.png', 'logo.png', 'shalibo-logo.png', 'base64', 'image/png');
 
         return $php_mailer;
     }

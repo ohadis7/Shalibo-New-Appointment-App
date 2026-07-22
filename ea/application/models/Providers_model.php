@@ -163,9 +163,30 @@ class Providers_model extends EA_Model
             ->num_rows();
 
         if ($count > 0) {
-            throw new InvalidArgumentException(
-                'The provided email address is already in use, please use a different one.',
-            );
+            // Shalibo Wellness — MongoDB connector for shared provider emails
+            // Allows multiple providers to share the same email (e.g., nuna@shalibowellness.com)
+            // by storing email-to-provider mappings in MongoDB.
+            $this->load->library('mongodb_client');
+
+            $updated_provider_id = $provider['id'] ?? null;
+
+            if ($this->mongodb_client->is_email_mapped($provider['email'])) {
+                // Email is known in the mapping — allow the duplicate
+                // Store/update the mapping in MongoDB with the new/updated provider ID
+                if ($updated_provider_id) {
+                    $this->mongodb_client->add_mapping(
+                        $provider['email'],
+                        $updated_provider_id,
+                        ($provider['first_name'] ?? '') . ' ' . ($provider['last_name'] ?? '')
+                    );
+                }
+            } elseif (empty($updated_provider_id)) {
+                // New provider with unmapped email — reject
+                throw new InvalidArgumentException(
+                    'The provided email address is already in use, please use a different one.',
+                );
+            }
+            // Existing provider with unmapped email: allow (duplicates already exist in EA)
         }
     }
 
@@ -415,7 +436,7 @@ class Providers_model extends EA_Model
 
         unset($provider['services'], $provider['settings']);
 
-        if (isset($settings['password'])) {
+        if (!empty($settings['password'])) {
             $existing_settings = $this->db->get_where('user_settings', ['id_users' => $provider['id']])->row_array();
 
             if (empty($existing_settings)) {

@@ -186,11 +186,15 @@ class Users_model extends EA_Model
         $settings = $user['settings'];
         unset($user['settings']);
 
-        if (isset($settings['password'])) {
+        if (!empty($settings['password'])) {
             $existing_settings = $this->db->get_where('user_settings', ['id_users' => $user['id']])->row_array();
 
             if (empty($existing_settings)) {
                 throw new RuntimeException('No settings record found for user with ID: ' . $user['id']);
+            }
+
+            if (empty($existing_settings['salt'])) {
+                $existing_settings['salt'] = $settings['salt'] = generate_salt();
             }
 
             $settings['password'] = hash_password($existing_settings['salt'], $settings['password']);

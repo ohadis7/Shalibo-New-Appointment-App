@@ -1,22 +1,13 @@
 <!DOCTYPE html>
-<!--
-  Shalibo Wellness — Booking Hub Landing Page
-  Serves as the main entry point: customers choose their service.
-  Each card links to a dedicated EA booking URL with ?service=ID&provider=ID
-  so each customer only sees their relevant provider and service.
-
-  DEPLOYMENT:
-    Dockerfile copies this to /var/www/html/landing.html
-    Share URL: https://booking.shalibowellness.com/landing.html
-    OR redirect shalibowellness.com → this page
--->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shalibo Wellness — Book an Appointment</title>
+<title>Shalibo Wellness — <?= e(vars('page_title')) ?></title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&family=Cinzel:wght@600;700&family=Cormorant+Garamond:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="<?= base_url('assets/img/favicon.ico') ?>">
+<link rel="icon" sizes="192x192" href="<?= base_url('assets/img/shalibo-logo.png') ?>">
 
 <style>
 /* ── Brand tokens ── */
@@ -39,12 +30,10 @@
   --trans:       all 0.22s cubic-bezier(0.4,0,0.2,1);
 }
 
-/* ── Reduced motion ── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration:.01ms !important; transition-duration:.01ms !important; }
 }
 
-/* ── Animations ── */
 @keyframes bandSlide { to { background-position: 200% 50%; } }
 @keyframes fadeUp {
   from { opacity:0; transform:translateY(18px); }
@@ -67,7 +56,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Teal top band */
 body::before {
   content: '';
   position: fixed;
@@ -80,35 +68,28 @@ body::before {
   z-index: 9999;
 }
 
-/* ── Logo ── */
 .logo-wrap {
   margin-bottom: 28px;
   animation: fadeUp .6s cubic-bezier(0.34,1.1,.64,1) both;
 }
 
-.logo-ring {
-  width: 148px;
-  height: 148px;
+.logo-wrap img {
+  width: 196px;
+  height: 196px;
   border-radius: 50%;
-  background: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  object-fit: cover;
   box-shadow:
     0 8px 28px rgba(0,0,0,.10),
-    0 0 0 2px rgba(91,181,176,.18),
-    0 0 0 7px rgba(91,181,176,.07);
+    0 0 0 2px rgba(91,181,176,.16);
   transition: box-shadow .3s ease;
 }
 
-.logo-ring:hover {
+.logo-wrap img:hover {
   box-shadow:
     0 12px 36px rgba(0,0,0,.13),
-    0 0 0 2px rgba(91,181,176,.32),
-    0 0 0 9px rgba(91,181,176,.10);
+    0 0 0 3px rgba(91,181,176,.30);
 }
 
-/* ── Header text ── */
 .page-header {
   text-align: center;
   margin-bottom: 36px;
@@ -132,7 +113,6 @@ body::before {
   line-height: 1.5;
 }
 
-/* ── Services grid ── */
 .services-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -148,7 +128,6 @@ body::before {
   }
 }
 
-/* ── Service card ── */
 .service-card {
   background: var(--card-bg);
   backdrop-filter: blur(20px);
@@ -179,7 +158,6 @@ body::before {
   transform: translateY(-1px);
 }
 
-/* Inner shine */
 .service-card::before {
   content: '';
   position: absolute;
@@ -199,7 +177,6 @@ body::before {
   box-shadow: var(--shadow-card);
 }
 
-/* ── Card icon ── */
 .card-icon {
   width: 54px;
   height: 54px;
@@ -218,7 +195,6 @@ body::before {
   color: var(--ink-muted);
 }
 
-/* ── Card content ── */
 .card-name {
   font-family: 'Lora', Georgia, serif;
   font-size: 19px;
@@ -263,7 +239,6 @@ body::before {
   border-color: rgba(91,181,176,.12);
 }
 
-/* ── Book button ── */
 .btn-book {
   display: flex;
   align-items: center;
@@ -319,7 +294,6 @@ body::before {
   text-align: center;
 }
 
-/* ── Divider ── */
 .divider {
   width: 100%;
   max-width: 420px;
@@ -332,7 +306,6 @@ body::before {
   .divider { max-width: 860px; }
 }
 
-/* ── Info section ── */
 .info-row {
   display: flex;
   align-items: center;
@@ -344,7 +317,6 @@ body::before {
   justify-content: center;
 }
 
-/* ── Footer ── */
 .footer {
   margin-top: 48px;
   text-align: center;
@@ -361,49 +333,23 @@ body::before {
 
 .footer a:hover { text-decoration: underline; }
 
-/* ── Scrollbar ── */
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: var(--cream); }
 ::-webkit-scrollbar-thumb { background: var(--teal); border-radius: 10px; }
 
-/* ── Mobile tweaks ── */
 @media (max-width: 480px) {
   body { padding: 52px 16px 40px; }
   .page-title { font-size: 23px; }
-  .logo-ring { width: 128px; height: 128px; }
+  .logo-wrap img { width: 164px; height: 164px; }
 }
 </style>
 </head>
 
 <body>
 
-<!-- ── Logo ── -->
+<!-- ── Logo (PNG) ── -->
 <div class="logo-wrap">
-  <div class="logo-ring">
-    <svg viewBox="0 0 240 240" width="118" height="118" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <path id="lp-top" d="M 25,120 A 95,95 0 0 1 215,120"/>
-        <path id="lp-bot" d="M 25,120 A 95,95 0 0 0 215,120"/>
-      </defs>
-      <circle cx="120" cy="120" r="119" fill="white"/>
-      <circle cx="120" cy="120" r="116" fill="none" stroke="#5BB5B0" stroke-width="2.2"/>
-      <circle cx="120" cy="120" r="104" fill="none" stroke="#5BB5B0" stroke-width="1"/>
-      <text fill="#5BB5B0" font-size="14" font-family="Cinzel,serif" font-weight="700" letter-spacing="3.5">
-        <textPath href="#lp-top" startOffset="50%" text-anchor="middle">SHALIBO WELLNESS</textPath>
-      </text>
-      <text fill="#5BB5B0" font-size="10.5" font-family="Cinzel,serif" font-weight="600" letter-spacing="1.5">
-        <textPath href="#lp-bot" startOffset="50%" text-anchor="middle">• BY DANIEL DAVID SHALIBO •</textPath>
-      </text>
-      <circle cx="108" cy="78" r="8" fill="#5BB5B0"/>
-      <text x="120" y="148"
-            fill="#5BB5B0"
-            font-size="82"
-            font-family="'Cormorant Garamond','Cormorant',Georgia,serif"
-            font-style="italic"
-            font-weight="700"
-            text-anchor="middle">S</text>
-    </svg>
-  </div>
+  <img src="<?= base_url('assets/img/shalibo-logo.png') ?>" alt="Shalibo Wellness">
 </div>
 
 <!-- ── Header ── -->
@@ -415,14 +361,9 @@ body::before {
 <!-- ── Service cards ── -->
 <div class="services-grid">
 
-  <!--
-    PERSONAL TRAINING — GM
-    EA booking URL: /index.php/booking?service=24&provider=18
-    Share this link directly with personal-training clients.
-  -->
-  <a class="service-card" href="/index.php/booking?service=24&provider=18">
+  <!-- Personal Training — GM -->
+  <a class="service-card" href="<?= site_url('booking?service=24&provider=18') ?>">
 
-    <!-- Icon: Activity / fitness waveform -->
     <div class="card-icon">
       <svg width="27" height="27" viewBox="0 0 24 24" fill="none"
            stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
@@ -439,7 +380,6 @@ body::before {
     </div>
 
     <span class="btn-book">
-      <!-- Arrow icon -->
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
            stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -449,15 +389,9 @@ body::before {
 
   </a>
 
-  <!--
-    NAILS TECH — Jean (coming soon)
-    Once Jean is added as a provider in EA, replace the href with:
-      /index.php/booking?service=NAILS_SERVICE_ID&provider=JEAN_PROVIDER_ID
-    and remove the "disabled" class + replace .btn-coming with .btn-book
-  -->
+  <!-- Nails Tech — Coming Soon -->
   <div class="service-card disabled">
 
-    <!-- Icon: Sparkles / beauty -->
     <div class="card-icon">
       <svg width="27" height="27" viewBox="0 0 24 24" fill="none"
            stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
@@ -484,7 +418,6 @@ body::before {
 
 <!-- ── Contact info row ── -->
 <div class="info-row">
-  <!-- Phone icon -->
   <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
        stroke="#5BB5B0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.06 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/>
@@ -494,9 +427,9 @@ body::before {
 
 <!-- ── Footer ── -->
 <div class="footer">
-  <p>© 2025 Shalibo Wellness &nbsp;·&nbsp; By Daniel David Shalibo</p>
+  <p>&copy; 2025 <?= e(vars('company_name')) ?> &nbsp;·&nbsp; By Daniel David Shalibo</p>
   <p style="margin-top:6px;">
-    <a href="mailto:nuna@shalibowellness.com">nuna@shalibowellness.com</a>
+    <a href="mailto:daniel@shalibowellness.com">daniel@shalibowellness.com</a>
   </p>
 </div>
 

@@ -1,36 +1,63 @@
 FROM alextselegidis/easyappointments:latest
 
 # ── Shalibo Wellness — Custom EA Image ──
-# Clean build: only copies the specific files we customized.
-# The base image provides all EA source files; we just overlay our changes.
-# No sed/php runtime injections — all edits are in the actual source files.
+# Overlays our customized files (Shalibo branding, Mongodb connector)
+# on top of the standard Easy!Appointments base image.
 #
 # Custom assets:
-#   assets/css/custom.css         — Booking page theme
-#   assets/css/login-override.css — Admin login page redesign
-#   assets/js/booking-inject.js   — Logo injection + provider filter + multi-service filter
-#   assets/js/login-inject.js     — Login page UI enhancer
-#   landing.html                  — Service hub landing page
+#   assets/img/shalibo-logo.png + logo.png  — Shalibo logo (logo.png replaces EA default)
+#   assets/img/favicon.ico                   — Shalibo favicon
+#   assets/css/custom.css                    — Global brand theme
 #
-# View edits:
-#   application/views/layouts/booking_layout.php  — Added CSS/JS includes + redirect script
-#   application/views/pages/login.php              — Added CSS/JS includes
+# Modified views (all Shalibo-branded):
+#   application/views/pages/*               — Login, landing, about, logout, password reset, recovery
+#   application/views/layouts/*             — Booking, account, backend, message layouts
+#   application/views/components/*          — Backend/booking headers & footers
+#   application/views/emails/*              — All email templates with Shalibo logo
+#
+# New controller:
+#   application/controllers/Landing.php     — Service hub landing page
+#
+# New library:
+#   application/libraries/Mongodb_client.php — MongoDB provider email connector
+#
+# PHP extensions:
+#   mongodb — Required for Shalibo's MongoDB provider email connector
 # ────────────────────────────────────────────────────
 
-# Copy custom assets (new files added alongside EA's existing assets)
-COPY ea/assets/css/custom.css         /var/www/html/assets/css/custom.css
-COPY ea/assets/css/login-override.css /var/www/html/assets/css/login-override.css
-COPY ea/assets/js/booking-inject.js   /var/www/html/assets/js/booking-inject.js
-COPY ea/assets/js/login-inject.js     /var/www/html/assets/js/login-inject.js
-COPY ea/landing.html                  /var/www/html/landing.html
+# Install MongoDB PHP extension for provider email connector
+RUN pecl install mongodb && docker-php-ext-enable mongodb
 
-# Copy modified view files (overlay on top of EA's originals)
-COPY ea/application/views/layouts/booking_layout.php /var/www/html/application/views/layouts/booking_layout.php
-COPY ea/application/views/pages/login.php             /var/www/html/application/views/pages/login.php
+# Install composer for the mongodb library
+COPY --from=composer:2 /usr/bin/composer /usr/local/bin/composer
 
-# Set correct ownership
-RUN chown -R www-data:www-data /var/www/html/assets/css/custom.css \
-    /var/www/html/assets/css/login-override.css \
-    /var/www/html/assets/js/booking-inject.js \
-    /var/www/html/assets/js/login-inject.js \
-    /var/www/html/landing.html
+# Install the mongodb/mongodb Composer library (required by Mongodb_client.php)
+# Remove phpunit dev dependency first - it requires PHP ^8.3 but base image has PHP 8.2
+RUN sed -i '/"phpunit\/phpunit"/d' /var/www/html/composer.json && \
+    composer require mongodb/mongodb ^2.0 --no-interaction --no-ansi
+
+# ── Custom Assets ──
+COPY ea/assets/img/shalibo-logo.png /var/www/html/assets/img/shalibo-logo.png
+COPY ea/assets/img/shalibo-logo.png /var/www/html/assets/img/logo.png
+COPY ea/assets/img/favicon.ico /var/www/html/assets/img/favicon.ico
+COPY ea/assets/css/custom.css /var/www/html/assets/css/custom.css
+
+# ── New Controller ──
+COPY ea/application/controllers/Landing.php /var/www/html/application/controllers/Landing.php
+
+# ── All Shalibo-branded views (overlay on top of EA originals) ──
+COPY --chown=www-data:www-data ea/application/views/pages/       /var/www/html/application/views/pages/
+COPY --chown=www-data:www-data ea/application/views/layouts/     /var/www/html/application/views/layouts/
+COPY --chown=www-data:www-data ea/application/views/components/  /var/www/html/application/views/components/
+COPY --chown=www-data:www-data ea/application/views/emails/      /var/www/html/application/views/emails/
+
+# ── Custom Library ──
+COPY ea/application/libraries/Mongodb_client.php /var/www/html/application/libraries/Mongodb_client.php
+
+# ── Ownership ──
+RUN chown -R www-data:www-data \
+    /var/www/html/assets/img/shalibo-logo.png \
+    /var/www/html/assets/img/favicon.ico \
+    /var/www/html/assets/css/custom.css \
+    /var/www/html/application/controllers/Landing.php \
+    /var/www/html/application/libraries/Mongodb_client.php
