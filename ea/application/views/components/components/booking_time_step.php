@@ -1,9 +1,4 @@
 <?php
-/**
- * Local variables.
- *
- * @var array $grouped_timezones
- */
 ?>
 
 <div id="wizard-frame-2" class="wizard-frame p-3 p-md-4" style="display:none;">
@@ -19,18 +14,7 @@
 
             <div class="col-12 col-lg-6">
                 <div id="select-time" class="mx-auto py-3" style="max-width: 288px;">
-                    <div class="mb-3">
-                        <label for="select-timezone" class="form-label">
-                            <?= lang('timezone') ?>
-                        </label>
-                        <?php component('timezone_dropdown', [
-                            'attributes' => 'id="select-timezone" class="form-select mb-3" value="UTC"',
-                            'grouped_timezones' => $grouped_timezones,
-                        ]); ?>
-                    </div>
-
                     <div id="available-hours" class="overflow-auto my-3 pe-2" style="max-height: 250px;"></div>
-
                 </div>
             </div>
         </div>
