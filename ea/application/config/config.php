@@ -382,8 +382,8 @@ $config['sess_driver'] = 'files';
 $config['sess_cookie_name'] = 'ea_session';
 $config['sess_expiration'] = 604800; // 1 week
 $config['sess_save_path'] = __DIR__ . '/../../storage/sessions';
-$config['sess_match_ip'] = true; // Enable IP matching for better session security
-$config['sess_time_to_update'] = 300;
+$config['sess_match_ip'] = false; // Disabled to prevent session invalidation behind proxies/load balancers
+$config['sess_time_to_update'] = 3600; // Regenerate session ID every hour instead of every 5 minutes
 $config['sess_regenerate_destroy'] = true;
 
 /*
