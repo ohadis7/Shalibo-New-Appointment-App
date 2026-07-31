@@ -257,22 +257,45 @@ class Email_messages
     ): PHPMailer {
         $php_mailer = new PHPMailer(true);
 
-        $php_mailer->CharSet = 'UTF-8';
-        $php_mailer->SMTPDebug = config('smtp_debug') ? SMTP::DEBUG_SERVER : null;
+        // Load email config explicitly to ensure SMTP settings are available
+        $this->CI->config->load('email', true);
+        $email_config = $this->CI->config->item('email');
 
-        if (config('protocol') === 'smtp') {
-            $php_mailer->isSMTP();
-            $php_mailer->Host = config('smtp_host');
-            $php_mailer->SMTPAuth = config('smtp_auth');
-            $php_mailer->Username = config('smtp_user');
-            $php_mailer->Password = config('smtp_pass');
-            $php_mailer->SMTPSecure = config('smtp_crypto');
-            $php_mailer->Port = config('smtp_port');
+        if (empty($email_config)) {
+            // Fallback: try loading without namespace (CI merges into main config)
+            $this->CI->config->load('email');
+            $email_config = [
+                'protocol' => config('protocol', 'smtp'),
+                'smtp_debug' => config('smtp_debug', '0'),
+                'smtp_host' => config('smtp_host', 'smtp.resend.com'),
+                'smtp_user' => config('smtp_user', 'resend'),
+                'smtp_pass' => config('smtp_pass', ''),
+                'smtp_crypto' => config('smtp_crypto', 'tls'),
+                'smtp_port' => config('smtp_port', 587),
+                'smtp_auth' => config('smtp_auth', true),
+                'from_name' => config('from_name', 'Shalibo Wellness'),
+                'from_address' => config('from_address', 'app@shalibowellness.com'),
+                'reply_to' => config('reply_to', 'app@shalibowellness.com'),
+                'mailtype' => config('mailtype', 'html'),
+            ];
         }
 
-        $from_name = config('from_name') ?: setting('company_name');
-        $from_address = config('from_address') ?: setting('company_email');
-        $reply_to_address = config('reply_to') ?: setting('company_email');
+        $php_mailer->CharSet = 'UTF-8';
+        $php_mailer->SMTPDebug = !empty($email_config['smtp_debug']) ? SMTP::DEBUG_SERVER : null;
+
+        if (!empty($email_config['protocol']) && $email_config['protocol'] === 'smtp') {
+            $php_mailer->isSMTP();
+            $php_mailer->Host = $email_config['smtp_host'] ?? 'smtp.resend.com';
+            $php_mailer->SMTPAuth = !empty($email_config['smtp_auth']);
+            $php_mailer->Username = $email_config['smtp_user'] ?? 'resend';
+            $php_mailer->Password = $email_config['smtp_pass'] ?? '';
+            $php_mailer->SMTPSecure = $email_config['smtp_crypto'] ?? 'tls';
+            $php_mailer->Port = (int) ($email_config['smtp_port'] ?? 587);
+        }
+
+        $from_name = $email_config['from_name'] ?? setting('company_name');
+        $from_address = $email_config['from_address'] ?? setting('company_email');
+        $reply_to_address = $email_config['reply_to'] ?? setting('company_email');
 
         $php_mailer->setFrom($from_address, $from_name);
         $php_mailer->addReplyTo($reply_to_address);
@@ -288,7 +311,9 @@ class Email_messages
         if ($html) {
             $plain_text = str_replace(["\n\n", "\n\n\n"], '', strip_tags($html));
 
-            if (config('mailtype') === 'html') {
+            $mailtype = $email_config['mailtype'] ?? 'html';
+
+            if ($mailtype === 'html') {
                 $php_mailer->isHTML();
             } else {
                 $html = $plain_text;
