@@ -47,6 +47,7 @@ class Services_model extends EA_Model
         'attendantsNumber' => 'attendants_number',
         'isPrivate' => 'is_private',
         'serviceCategoryId' => 'id_service_categories',
+        'dateRestrictions' => 'date_restrictions',
     ];
 
     /**
@@ -126,6 +127,55 @@ class Services_model extends EA_Model
             throw new InvalidArgumentException(
                 'The provided attendants number is invalid: ' . $service['attendants_number'],
             );
+        }
+
+        // Validate date_restrictions: each range must have start <= end.
+        if (!empty($service['date_restrictions'])) {
+            $restrictions = is_string($service['date_restrictions'])
+                ? json_decode($service['date_restrictions'], true)
+                : $service['date_restrictions'];
+
+            if (!is_array($restrictions)) {
+                throw new InvalidArgumentException(
+                    'The provided date_restrictions value is not a valid JSON array.',
+                );
+            }
+
+            foreach ($restrictions as $index => $range) {
+                if (!is_array($range)) {
+                    throw new InvalidArgumentException(
+                        'Invalid date restriction entry at index ' . $index . ': expected an object with start and end dates.',
+                    );
+                }
+
+                $start = $range['start'] ?? null;
+                $end = $range['end'] ?? $start;
+
+                // Validate date formats using the same pattern as Working_plan_exceptions_model.
+                if ($start) {
+                    $start_dt = DateTime::createFromFormat('Y-m-d', $start);
+                    if (!$start_dt || $start_dt->format('Y-m-d') !== $start) {
+                        throw new InvalidArgumentException(
+                            'Invalid start date format at index ' . $index . ': expected Y-m-d, got ' . $start,
+                        );
+                    }
+                }
+
+                if ($end) {
+                    $end_dt = DateTime::createFromFormat('Y-m-d', $end);
+                    if (!$end_dt || $end_dt->format('Y-m-d') !== $end) {
+                        throw new InvalidArgumentException(
+                            'Invalid end date format at index ' . $index . ': expected Y-m-d, got ' . $end,
+                        );
+                    }
+                }
+
+                if ($start && $end && $start > $end) {
+                    throw new InvalidArgumentException(
+                        'Date restriction at index ' . $index . ' has start date (' . $start . ') after end date (' . $end . ').',
+                    );
+                }
+            }
         }
     }
 
@@ -260,6 +310,13 @@ class Services_model extends EA_Model
 
         $this->cast($service);
 
+        // Decode date_restrictions from JSON so controllers receive a consistent decoded array.
+        if (!empty($service['date_restrictions'])) {
+            $service['date_restrictions'] = json_decode($service['date_restrictions'], true);
+        } else {
+            $service['date_restrictions'] = [];
+        }
+
         return $service;
     }
 
@@ -306,10 +363,11 @@ class Services_model extends EA_Model
      * Get all the service records that are assigned to at least one provider.
      *
      * @param bool $without_private Only include the public services.
+     * @param string|null $check_date Optional date (Y-m-d) to check against date_restrictions.
      *
      * @return array Returns an array of services.
      */
-    public function get_available_services(bool $without_private = false): array
+    public function get_available_services(bool $without_private = false, ?string $check_date = null): array
     {
         if ($without_private) {
             $this->db->where('services.is_private', false);
@@ -329,6 +387,38 @@ class Services_model extends EA_Model
 
         foreach ($services as &$service) {
             $this->cast($service);
+
+            // Decode date_restrictions from JSON
+            if (!empty($service['date_restrictions'])) {
+                $service['date_restrictions'] = json_decode($service['date_restrictions'], true);
+            } else {
+                $service['date_restrictions'] = [];
+            }
+        }
+
+        // Filter services by date restrictions if a check date is provided
+        if ($check_date !== null) {
+            $services = array_filter($services, function ($service) use ($check_date) {
+                // If no date restrictions, service is always available
+                if (empty($service['date_restrictions'])) {
+                    return true;
+                }
+
+                // Check if the date falls within any of the restriction ranges
+                foreach ($service['date_restrictions'] as $range) {
+                    $start = $range['start'] ?? null;
+                    $end = $range['end'] ?? $start;
+
+                    if ($start && $check_date >= $start && $check_date <= $end) {
+                        return true;
+                    }
+                }
+
+                return false;
+            });
+
+            // Re-index the array after filtering
+            $services = array_values($services);
         }
 
         return $services;
@@ -362,6 +452,13 @@ class Services_model extends EA_Model
 
         foreach ($services as &$service) {
             $this->cast($service);
+
+            // Decode date_restrictions from JSON for the admin frontend
+            if (!empty($service['date_restrictions'])) {
+                $service['date_restrictions'] = json_decode($service['date_restrictions'], true);
+            } else {
+                $service['date_restrictions'] = [];
+            }
         }
 
         return $services;
@@ -404,6 +501,13 @@ class Services_model extends EA_Model
 
         foreach ($services as &$service) {
             $this->cast($service);
+
+            // Decode date_restrictions from JSON for the admin frontend
+            if (!empty($service['date_restrictions'])) {
+                $service['date_restrictions'] = json_decode($service['date_restrictions'], true);
+            } else {
+                $service['date_restrictions'] = [];
+            }
         }
 
         return $services;
@@ -471,6 +575,16 @@ class Services_model extends EA_Model
      */
     public function api_encode(array &$service): void
     {
+        $date_restrictions = [];
+
+        if (!empty($service['date_restrictions'])) {
+            if (is_string($service['date_restrictions'])) {
+                $date_restrictions = json_decode($service['date_restrictions'], true) ?: [];
+            } else {
+                $date_restrictions = $service['date_restrictions'];
+            }
+        }
+
         $encoded_resource = [
             'id' => array_key_exists('id', $service) ? (int) $service['id'] : null,
             'name' => $service['name'],
@@ -484,6 +598,7 @@ class Services_model extends EA_Model
             'isPrivate' => (bool) $service['is_private'],
             'serviceCategoryId' =>
                 $service['id_service_categories'] !== null ? (int) $service['id_service_categories'] : null,
+            'dateRestrictions' => $date_restrictions,
         ];
 
         $service = $encoded_resource;
@@ -545,6 +660,10 @@ class Services_model extends EA_Model
 
         if (array_key_exists('isPrivate', $service)) {
             $decoded_resource['is_private'] = (bool) $service['isPrivate'];
+        }
+
+        if (array_key_exists('dateRestrictions', $service)) {
+            $decoded_resource['date_restrictions'] = json_encode($service['dateRestrictions']);
         }
 
         $service = $decoded_resource;
