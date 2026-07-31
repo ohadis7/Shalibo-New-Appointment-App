@@ -342,6 +342,21 @@
 
                     <br>
 
+                    <div class="border rounded mb-3 p-3">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="date-whitelist-enabled">
+                            <label class="form-check-label" for="date-whitelist-enabled">
+                                <?= lang('date_whitelist_enabled') ?>
+                            </label>
+                        </div>
+
+                        <div class="form-text text-muted">
+                            <small>
+                                <?= lang('date_whitelist_enabled_hint') ?>
+                            </small>
+                        </div>
+                    </div>
+
                     <h4 class="mb-3 fw-light">
                         <?= lang('working_plan_exceptions') ?>
                     </h4>
