@@ -157,6 +157,9 @@ class Booking extends EA_Controller
             return;
         }
 
+        // Load all available services — date restrictions are enforced later when the customer
+        // picks a specific date (via get_available_hours / get_unavailable_dates).
+        // This ensures services with only future date ranges still appear in the service list.
         $available_services = $this->services_model->get_available_services(true);
         $available_providers = $this->providers_model->get_available_providers(true);
 
@@ -177,14 +180,7 @@ class Booking extends EA_Controller
         $require_email = setting('require_email');
         $display_phone_number = setting('display_phone_number');
         $require_phone_number = setting('require_phone_number');
-        $display_address = setting('display_address');
-        $require_address = setting('require_address');
-        $display_city = setting('display_city');
-        $require_city = setting('require_city');
-        $display_zip_code = setting('display_zip_code');
-        $require_zip_code = setting('require_zip_code');
-        $display_notes = setting('display_notes');
-        $require_notes = setting('require_notes');
+
         $display_cookie_notice = setting('display_cookie_notice');
         $cookie_notice_content = setting('cookie_notice_content');
         $display_terms_and_conditions = setting('display_terms_and_conditions');
@@ -208,9 +204,6 @@ class Booking extends EA_Controller
         if (empty($theme) || !file_exists(__DIR__ . '/../../assets/css/themes/' . $theme . '.min.css')) {
             $theme = 'default';
         }
-
-        $timezones = $this->timezones->to_array();
-        $grouped_timezones = $this->timezones->to_grouped_array();
 
         $appointment_hash = html_vars('appointment_hash');
 
@@ -329,14 +322,6 @@ class Booking extends EA_Controller
             'require_email' => $require_email,
             'display_phone_number' => $display_phone_number,
             'require_phone_number' => $require_phone_number,
-            'display_address' => $display_address,
-            'require_address' => $require_address,
-            'display_city' => $display_city,
-            'require_city' => $require_city,
-            'display_zip_code' => $display_zip_code,
-            'require_zip_code' => $require_zip_code,
-            'display_notes' => $display_notes,
-            'require_notes' => $require_notes,
             'display_cookie_notice' => $display_cookie_notice,
             'cookie_notice_content' => $cookie_notice_content,
             'display_terms_and_conditions' => $display_terms_and_conditions,
@@ -351,8 +336,6 @@ class Booking extends EA_Controller
             'google_analytics_code' => $google_analytics_code,
             'matomo_analytics_url' => $matomo_analytics_url,
             'matomo_analytics_site_id' => $matomo_analytics_site_id,
-            'timezones' => $timezones,
-            'grouped_timezones' => $grouped_timezones,
             'manage_mode' => $manage_mode,
             'appointment_data' => $appointment,
             'provider_data' => $provider ? filter_sensitive_user_data($provider) : null,
@@ -415,25 +398,12 @@ class Booking extends EA_Controller
             // Sanitize appointment fields - only allow expected fields
             $appointment = array_intersect_key($appointment, array_flip($this->allowed_appointment_fields));
 
-            if (!array_key_exists('address', $customer)) {
-                $customer['address'] = '';
-            }
-
-            if (!array_key_exists('city', $customer)) {
-                $customer['city'] = '';
-            }
-
-            if (!array_key_exists('zip_code', $customer)) {
-                $customer['zip_code'] = '';
-            }
-
-            if (!array_key_exists('notes', $customer)) {
-                $customer['notes'] = '';
-            }
-
             if (!array_key_exists('phone_number', $customer)) {
                 $customer['phone_number'] = '';
             }
+
+            // Set the default timezone to Asia/Jerusalem for all new bookings.
+            $customer['timezone'] = 'Asia/Jerusalem';
 
             // Check appointment availability before registering it to the database.
             $appointment['id_users_provider'] = $this->check_datetime_availability();
@@ -664,6 +634,25 @@ class Booking extends EA_Controller
 
         $service = $this->services_model->find($service_id);
 
+        // Check if the selected date falls within the service's date restrictions.
+        if (!empty($service['date_restrictions'])) {
+            $within_restrictions = false;
+
+            foreach ($service['date_restrictions'] as $range) {
+                $start = $range['start'] ?? null;
+                $end = $range['end'] ?? $start;
+
+                if ($start && $date >= $start && $date <= $end) {
+                    $within_restrictions = true;
+                    break;
+                }
+            }
+
+            if (!$within_restrictions) {
+                return null;
+            }
+        }
+
         $provider_id = null;
 
         $max_hours_count = 0;
@@ -716,6 +705,28 @@ class Booking extends EA_Controller
             $service_id = request('service_id');
             $selected_date = request('selected_date');
 
+            // Check if the selected date falls within the service's date restrictions.
+            $service = $this->services_model->find($service_id);
+
+            if (!empty($service['date_restrictions'])) {
+                $within_restrictions = false;
+
+                foreach ($service['date_restrictions'] as $range) {
+                    $start = $range['start'] ?? null;
+                    $end = $range['end'] ?? $start;
+
+                    if ($start && $selected_date >= $start && $selected_date <= $end) {
+                        $within_restrictions = true;
+                        break;
+                    }
+                }
+
+                if (!$within_restrictions) {
+                    json_response([]);
+                    return;
+                }
+            }
+
             // Do not continue if there was no provider selected (more likely there is no provider in the system).
 
             if (empty($provider_id)) {
@@ -731,8 +742,6 @@ class Booking extends EA_Controller
 
             // If the user has selected the "any-provider" option then we will need to search for an available provider
             // that will provide the requested service.
-
-            $service = $this->services_model->find($service_id);
 
             if ($provider_id === ANY_PROVIDER) {
                 $providers = $this->providers_model->get_available_providers(true);
@@ -819,13 +828,36 @@ class Booking extends EA_Controller
             // Get the service record.
             $service = $this->services_model->find($service_id);
 
+            // Parse service date restrictions for quick lookup
+            $service_date_restrictions = !empty($service['date_restrictions'])
+                ? $service['date_restrictions']
+                : [];
+
             for ($i = 1; $i <= $number_of_days_in_month; $i++) {
-                $current_date = new DateTime($selected_date->format('Y-m') . '-' . $i);
+                $current_date_str = $selected_date->format('Y-m') . '-' . str_pad($i, 2, '0', STR_PAD_LEFT);
+                $current_date = new DateTime($current_date_str);
 
                 if ($current_date < new DateTime(date('Y-m-d 00:00:00'))) {
                     // Past dates become immediately unavailability.
                     $unavailable_dates[] = $current_date->format('Y-m-d');
                     continue;
+                }
+
+                // Check if the date is within the service's date restrictions.
+                if (!empty($service_date_restrictions)) {
+                    $within_restrictions = false;
+                    foreach ($service_date_restrictions as $range) {
+                        $start = $range['start'] ?? null;
+                        $end = $range['end'] ?? $start;
+                        if ($start && $current_date_str >= $start && $current_date_str <= $end) {
+                            $within_restrictions = true;
+                            break;
+                        }
+                    }
+                    if (!$within_restrictions) {
+                        $unavailable_dates[] = $current_date->format('Y-m-d');
+                        continue;
+                    }
                 }
 
                 // Finding at least one slot of availability.
