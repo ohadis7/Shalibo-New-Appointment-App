@@ -32,6 +32,15 @@
                 <?= lang('add_to_google_calendar') ?>
             </a>
             <?php endif; ?>
+
+            <?php if (vars('display_add_to_outlook_calendar') === '1'): ?>
+            <a href="<?= vars(
+                'add_to_outlook_url',
+            ) ?>" id="add-to-outlook-calendar" class="btn btn-outline-primary px-4 py-2" target="_blank">
+                <i class="fab fa-microsoft me-2"></i>
+                <?= lang('add_to_outlook_calendar') ?>
+            </a>
+            <?php endif; ?>
         </div>
     </div>
 </div>
