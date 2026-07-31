@@ -620,6 +620,66 @@ class Google_sync
     }
 
     /**
+     * Get the Add-To-Outlook-URL, that can be used by anyone to quickly add the event to Outlook Calendar.
+     *
+     * @param int $appointment_id
+     *
+     * @return string
+     *
+     * @throws Exception
+     */
+    public function get_add_to_outlook_url(int $appointment_id): string
+    {
+        $appointment = $this->CI->appointments_model->find($appointment_id);
+
+        $service = $this->CI->services_model->find($appointment['id_services']);
+
+        $provider = $this->CI->providers_model->find($appointment['id_users_provider']);
+
+        $customer = $this->CI->customers_model->find($appointment['id_users_customer']);
+
+        $provider_timezone_instance = new DateTimeZone($provider['timezone']);
+        $utc_timezone_instance = new DateTimeZone('UTC');
+
+        $appointment_start = new DateTime($appointment['start_datetime'], $provider_timezone_instance);
+        $appointment_start->setTimezone($utc_timezone_instance);
+
+        $appointment_end = new DateTime($appointment['end_datetime'], $provider_timezone_instance);
+        $appointment_end->setTimezone($utc_timezone_instance);
+
+        // Build description with service and customer details
+        $description_lines = [];
+        $description_lines[] = 'Service: ' . $service['name'];
+        $description_lines[] = 'Provider: ' . $provider['first_name'] . ' ' . $provider['last_name'];
+        $description_lines[] = '';
+        $description_lines[] = 'Customer: ' . ($customer['first_name'] ?? '') . ' ' . ($customer['last_name'] ?? '');
+        if (!empty($customer['email'])) {
+            $description_lines[] = 'Email: ' . $customer['email'];
+        }
+        if (!empty($customer['phone_number'])) {
+            $description_lines[] = 'Phone: ' . $customer['phone_number'];
+        }
+        if (!empty($appointment['notes'])) {
+            $description_lines[] = '';
+            $description_lines[] = 'Notes: ' . $appointment['notes'];
+        }
+        $description_lines[] = '';
+        $description_lines[] = 'Manage: ' . site_url('booking/reschedule/' . $appointment['hash']);
+
+        $params = [
+            'path' => '/calendar/action/compose',
+            'rru' => 'addevent',
+            'subject' => $service['name'],
+            'startdt' => $appointment_start->format('Y-m-d\TH:i:s\Z'),
+            'enddt' => $appointment_end->format('Y-m-d\TH:i:s\Z'),
+            'body' => implode("\n", $description_lines),
+            'location' => $appointment['location'] ?? setting('company_name', ''),
+        ];
+
+        return 'https://outlook.live.com/calendar/0/deeplink/compose?' . http_build_query($params);
+    }
+
+    /**
      * Check whether a start/end datetime pair should be pushed to Google as an all-day event.
      *
      * An event is treated as all-day when its start time is 00:00 and its end time is 23:59,
