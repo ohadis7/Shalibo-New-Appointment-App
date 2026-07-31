@@ -883,6 +883,9 @@ class Providers_model extends EA_Model
                 'workingPlanExceptions' => array_key_exists('working_plan_exceptions', $provider['settings'])
                     ? json_decode($provider['settings']['working_plan_exceptions'], true)
                     : null,
+                'dateWhitelistEnabled' => array_key_exists('date_whitelist_enabled', $provider['settings'])
+                    ? filter_var($provider['settings']['date_whitelist_enabled'], FILTER_VALIDATE_BOOLEAN)
+                    : false,
             ];
         }
 
@@ -1033,6 +1036,13 @@ class Providers_model extends EA_Model
             if (array_key_exists('workingPlanExceptions', $provider['settings'])) {
                 $decoded_resource['settings']['working_plan_exceptions'] = json_encode(
                     $provider['settings']['workingPlanExceptions'],
+                );
+            }
+
+            if (array_key_exists('dateWhitelistEnabled', $provider['settings'])) {
+                $decoded_resource['settings']['date_whitelist_enabled'] = filter_var(
+                    $provider['settings']['dateWhitelistEnabled'],
+                    FILTER_VALIDATE_BOOLEAN,
                 );
             }
         }
