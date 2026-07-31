@@ -159,6 +159,40 @@
                 <textarea id="description" rows="4" class="form-control" disabled></textarea>
             </div>
 
+            <!-- Date Restrictions Section -->
+            <div class="border rounded mb-3 p-3">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <label class="form-label mb-0 fw-bold">
+                        <?= lang('service_date_restrictions') ?>
+                    </label>
+                    <button type="button" class="btn btn-outline-primary btn-sm" id="add-date-restriction" disabled>
+                        <i class="fas fa-plus-square me-1"></i>
+                        <?= lang('add_date_restriction') ?>
+                    </button>
+                </div>
+
+                <div class="form-text text-muted mb-2">
+                    <small>
+                        <?= lang('service_date_restrictions_hint') ?>
+                    </small>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-striped" id="date-restrictions-table">
+                        <thead>
+                        <tr>
+                            <th><?= lang('start_date') ?></th>
+                            <th><?= lang('end_date') ?></th>
+                            <th><?= lang('actions') ?></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <!-- Dynamic Content -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
             <div class="d-flex justify-content-between align-items-center mb-3">
                 <label class="form-label mb-0">
                     <?= lang('providers') ?>
