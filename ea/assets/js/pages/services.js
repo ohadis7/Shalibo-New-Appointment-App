@@ -29,6 +29,9 @@ App.Pages.Services = (function () {
     const $description = $('#description');
     const $filterServices = $('#filter-services');
     const $color = $('#color');
+    const $dateRestrictionsTable = $('#date-restrictions-table tbody');
+    const $addDateRestriction = $('#add-date-restriction');
+    let dateRestrictions = []; // Array of {start, end} objects
     let filterResults = {};
     let filterLimit = 20;
 
@@ -100,6 +103,8 @@ App.Pages.Services = (function () {
             App.Components.ColorSelection.enable($color);
             $('#service-providers input:checkbox').prop('disabled', false);
             $('#select-all-providers, #select-none-providers').prop('disabled', false);
+            // Enable date restriction editing
+            $('#add-date-restriction').prop('disabled', false);
         });
 
         /**
@@ -118,6 +123,8 @@ App.Pages.Services = (function () {
             App.Components.ColorSelection.enable($color);
             $('#service-providers input:checkbox').prop('disabled', false);
             $('#select-all-providers, #select-none-providers').prop('disabled', false);
+            // Enable date restriction editing
+            $('#add-date-restriction').prop('disabled', false);
 
             // Default values
             $name.val('Service');
@@ -196,6 +203,8 @@ App.Pages.Services = (function () {
             App.Components.ColorSelection.enable($color);
             $('#service-providers input:checkbox').prop('disabled', false);
             $('#select-all-providers, #select-none-providers').prop('disabled', false);
+            // Enable date restriction editing
+            $('#add-date-restriction').prop('disabled', false);
         });
 
         /**
@@ -235,6 +244,36 @@ App.Pages.Services = (function () {
         $services.on('click', '#select-none-providers', () => {
             $('#service-providers input:checkbox').prop('checked', false);
         });
+
+        /**
+         * Event: Add Date Restriction Button "Click"
+         */
+        $services.on('click', '#add-date-restriction', () => {
+            dateRestrictions.push({start: '', end: ''});
+            renderDateRestrictions();
+        });
+
+        /**
+         * Event: Date Restriction Input Change
+         */
+        $services.on('change', '.date-restriction-start', (event) => {
+            const index = $(event.currentTarget).closest('tr').index();
+            dateRestrictions[index].start = $(event.currentTarget).val();
+        });
+
+        $services.on('change', '.date-restriction-end', (event) => {
+            const index = $(event.currentTarget).closest('tr').index();
+            dateRestrictions[index].end = $(event.currentTarget).val();
+        });
+
+        /**
+         * Event: Delete Date Restriction Button "Click"
+         */
+        $services.on('click', '.delete-date-restriction', (event) => {
+            const index = $(event.currentTarget).closest('tr').index();
+            dateRestrictions.splice(index, 1);
+            renderDateRestrictions();
+        });
     }
 
     /**
@@ -244,6 +283,11 @@ App.Pages.Services = (function () {
      * then the update operation is going to be executed.
      */
     function save(service) {
+        // Attach date restrictions
+        service.date_restrictions = JSON.stringify(dateRestrictions.filter(function (dr) {
+            return dr.start && dr.end;
+        }));
+
         App.Http.Services.save(service).then((response) => {
             App.Layouts.Backend.displayNotification(lang('service_saved'));
             App.Pages.Services.resetForm();
@@ -275,6 +319,8 @@ App.Pages.Services = (function () {
     function validate() {
         $services.find('.is-invalid').removeClass('is-invalid');
         $services.find('.form-message').removeClass('alert-danger').hide();
+        // Clear any previous date restriction validation highlights
+        $dateRestrictionsTable.find('tr').removeClass('table-danger');
 
         try {
             // Validate required fields.
@@ -295,6 +341,18 @@ App.Pages.Services = (function () {
             if (Number($duration.val()) < vars('event_minimum_duration')) {
                 $duration.addClass('is-invalid');
                 throw new Error(lang('invalid_duration'));
+            }
+
+            // Validate date restrictions: start must be <= end when both are provided.
+            for (let i = 0; i < dateRestrictions.length; i++) {
+                const dr = dateRestrictions[i];
+                if (dr.start && dr.end) {
+                    if (dr.start > dr.end) {
+                        // Highlight the row with an error class
+                        $dateRestrictionsTable.find('tr').eq(i).addClass('table-danger');
+                        throw new Error(lang('date_restriction_start_after_end'));
+                    }
+                }
             }
 
             return true;
@@ -328,6 +386,11 @@ App.Pages.Services = (function () {
         $('#service-providers input:checkbox').prop('disabled', true).prop('checked', false);
         $('#select-all-providers, #select-none-providers').prop('disabled', true);
         $('#service-providers a').remove();
+
+        // Reset date restrictions
+        dateRestrictions = [];
+        renderDateRestrictions();
+        $('#add-date-restriction').prop('disabled', true);
 
         App.Components.ColorSelection.disable($color);
     }
@@ -389,6 +452,14 @@ App.Pages.Services = (function () {
                 new bootstrap.Tooltip($link[0]);
             });
         }
+
+        // Display date restrictions
+        if (service.date_restrictions && Array.isArray(service.date_restrictions)) {
+            dateRestrictions = JSON.parse(JSON.stringify(service.date_restrictions));
+        } else {
+            dateRestrictions = [];
+        }
+        renderDateRestrictions();
     }
 
     /**
@@ -505,6 +576,87 @@ App.Pages.Services = (function () {
     /**
      * Initialize the module.
      */
+    /**
+     * Render the date restrictions table.
+     */
+    function renderDateRestrictions() {
+        $dateRestrictionsTable.empty();
+
+        if (!dateRestrictions.length) {
+            $dateRestrictionsTable.append(
+                $('<tr/>').append(
+                    $('<td/>', {
+                        'colspan': 3,
+                        'class': 'text-muted text-center',
+                        'text': lang('no_date_restrictions'),
+                    }),
+                ),
+            );
+            return;
+        }
+
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+
+        dateRestrictions.forEach(function (restriction, index) {
+            const $row = $('<tr/>');
+
+            // Check if this range is expired (end date is before today)
+            // Parse end date as local time to avoid UTC timezone offset issues
+            let isExpired = false;
+            if (restriction.end) {
+                const endParts = restriction.end.split('-');
+                const endDate = new Date(Number(endParts[0]), Number(endParts[1]) - 1, Number(endParts[2]));
+                isExpired = endDate < today;
+            }
+
+            if (isExpired) {
+                $row.addClass('date-restriction-expired');
+            }
+
+            // Start date
+            const $startTd = $('<td/>');
+            const $startInput = $('<input/>', {
+                'type': 'date',
+                'class': 'form-control form-control-sm date-restriction-start' + (isExpired ? ' text-muted' : ''),
+                'value': restriction.start || '',
+            });
+            $startTd.append($startInput);
+            $row.append($startTd);
+
+            // End date
+            const $endTd = $('<td/>');
+            const $endInput = $('<input/>', {
+                'type': 'date',
+                'class': 'form-control form-control-sm date-restriction-end' + (isExpired ? ' text-muted' : ''),
+                'value': restriction.end || '',
+            });
+            $endTd.append($endInput);
+            $row.append($endTd);
+
+            // Expired badge + Actions
+            const $actionsTd = $('<td/>');
+
+            if (isExpired) {
+                const $expiredBadge = $('<span/>', {
+                    'class': 'badge bg-secondary me-2',
+                    'text': lang('expired'),
+                });
+                $actionsTd.append($expiredBadge);
+            }
+
+            const $deleteBtn = $('<button/>', {
+                'type': 'button',
+                'class': 'btn btn-outline-danger btn-sm delete-date-restriction',
+                'html': $('<i/>', {'class': 'fas fa-trash-alt'}),
+            });
+            $actionsTd.append($deleteBtn);
+            $row.append($actionsTd);
+
+            $dateRestrictionsTable.append($row);
+        });
+    }
+
     function initialize() {
         App.Pages.Services.resetForm();
         App.Pages.Services.filter('');
