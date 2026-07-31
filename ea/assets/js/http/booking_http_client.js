@@ -101,16 +101,27 @@ App.Http.Booking = (function () {
                 }
 
                 const providerTimezone = provider.timezone;
-                const selectedTimezone = $('#select-timezone').val();
+
+                // If the timezone select element was removed (no longer shown to the customer),
+                // fall back to the default timezone from settings, then to the provider's timezone.
+                const selectedTimezone = $('#select-timezone').val() || vars('default_timezone') || providerTimezone;
+
                 const timeFormat = vars('time_format') === 'regular' ? 'h:mm a' : 'HH:mm';
 
                 response.forEach((availableHour) => {
-                    const availableHourMoment = moment
-                        .tz(selectedDate + ' ' + availableHour + ':00', providerTimezone)
-                        .tz(selectedTimezone);
+                    let availableHourMoment = moment
+                        .tz(selectedDate + ' ' + availableHour + ':00', providerTimezone);
 
-                    if (availableHourMoment.format('YYYY-MM-DD') !== selectedDate) {
-                        return; // Due to the selected timezone the available hour belongs to another date.
+                    if (selectedTimezone && availableHourMoment.isValid()) {
+                        availableHourMoment = availableHourMoment.tz(selectedTimezone);
+
+                        if (availableHourMoment.isValid() && availableHourMoment.format('YYYY-MM-DD') !== selectedDate) {
+                            return; // Due to the selected timezone the available hour belongs to another date.
+                        }
+                    }
+
+                    if (!availableHourMoment.isValid()) {
+                        return;
                     }
 
                     $availableHours.append(
