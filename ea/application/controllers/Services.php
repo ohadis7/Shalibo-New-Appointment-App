@@ -34,9 +34,11 @@ class Services extends EA_Controller
         'is_private',
         'id_service_categories',
         'providers',
+        'date_restrictions',
     ];
     public array $optional_service_fields = [
         'id_service_categories' => null,
+        'date_restrictions' => null,
     ];
 
     /**
