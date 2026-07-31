@@ -67,6 +67,51 @@ class Availability
             return [];
         }
 
+        // If the service has date_restrictions and the selected date falls within them,
+        // ensure the provider is available by adding working hours for that day.
+        // This prevents the provider's working plan from blocking dates that the
+        // service explicitly allows via date restrictions.
+        $within_service_date_restriction = false;
+
+        if (!empty($service['date_restrictions'])) {
+            foreach ($service['date_restrictions'] as $range) {
+                $start = $range['start'] ?? null;
+                $end = $range['end'] ?? $start;
+
+                if ($start && $date >= $start && $date <= $end) {
+                    $within_service_date_restriction = true;
+
+                    // The date is within the service's date restrictions.
+                    // Ensure the provider's working plan includes this day.
+                    $working_day = strtolower(date('l', strtotime($date)));
+                    $working_plan = json_decode($provider['settings']['working_plan'], true);
+
+                    if (empty($working_plan[$working_day])) {
+                        // Find any existing working day to clone its hours,
+                        // or use default 09:00-17:00.
+                        $default_hours = null;
+
+                        foreach (['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'] as $day) {
+                            if (!empty($working_plan[$day])) {
+                                $default_hours = $working_plan[$day];
+                                break;
+                            }
+                        }
+
+                        if (!$default_hours) {
+                            $default_hours = ['start' => '09:00', 'end' => '17:00', 'breaks' => []];
+                        }
+
+                        // Inject working hours for this day into the provider's settings.
+                        $working_plan[$working_day] = $default_hours;
+                        $provider['settings']['working_plan'] = json_encode($working_plan);
+                    }
+
+                    break;
+                }
+            }
+        }
+
         if ($service['attendants_number'] > 1) {
             $available_hours = $this->consider_multiple_attendants($date, $service, $provider, $exclude_appointment_id);
         } else {
@@ -77,7 +122,13 @@ class Availability
 
         $available_hours = $this->consider_book_advance_timeout($date, $available_hours, $provider);
 
-        return $this->consider_future_booking_limit($date, $available_hours, $provider);
+        // If the date is within the service's explicit date restrictions, bypass the
+        // future booking limit. The admin set this date as available intentionally.
+        if (!$within_service_date_restriction) {
+            $available_hours = $this->consider_future_booking_limit($date, $available_hours, $provider);
+        }
+
+        return $available_hours;
     }
 
     /**
@@ -113,15 +164,32 @@ class Availability
 
         $working_day = strtolower(date('l', strtotime($date)));
 
-        $date_working_plan = $working_plan[$working_day] ?? null;
+        // Check if Date Whitelist Mode is enabled for this provider
+        $date_whitelist_enabled = !empty($provider['settings']['date_whitelist_enabled']);
 
-        // Search if the $date is a custom availability period added outside the normal working plan.
-        if (array_key_exists($date, $working_plan_exceptions)) {
-            $date_working_plan = $working_plan_exceptions[$date];
-        }
+        if ($date_whitelist_enabled) {
+            // Date Whitelist Mode: Skip the regular working plan entirely.
+            // Provider is unavailable by default and only available on explicitly defined exception dates.
+            $date_working_plan = null;
 
-        if (!$date_working_plan) {
-            return [];
+            if (array_key_exists($date, $working_plan_exceptions)) {
+                $date_working_plan = $working_plan_exceptions[$date];
+            }
+
+            if (!$date_working_plan) {
+                return [];
+            }
+        } else {
+            $date_working_plan = $working_plan[$working_day] ?? null;
+
+            // Search if the $date is a custom availability period added outside the normal working plan.
+            if (array_key_exists($date, $working_plan_exceptions)) {
+                $date_working_plan = $working_plan_exceptions[$date];
+            }
+
+            if (!$date_working_plan) {
+                return [];
+            }
         }
 
         $periods = [
@@ -333,6 +401,9 @@ class Availability
      */
     public function get_available_periods(string $date, array $provider, ?int $exclude_appointment_id = null): array
     {
+        // Check if Date Whitelist Mode is enabled for this provider
+        $date_whitelist_enabled = !empty($provider['settings']['date_whitelist_enabled']);
+
         // Get the service, provider's working plan and provider appointments.
         $working_plan = json_decode($provider['settings']['working_plan'], true);
 
@@ -372,15 +443,29 @@ class Availability
         // every reserved appointment is considered to be a taken space in the plan.
         $working_day = strtolower(date('l', strtotime($date)));
 
-        $date_working_plan = $working_plan[$working_day] ?? null;
+        if ($date_whitelist_enabled) {
+            // Date Whitelist Mode: Skip the regular working plan entirely.
+            // Provider is unavailable by default and only available on explicitly defined exception dates.
+            $date_working_plan = null;
 
-        // Search if the $date is a custom availability period added outside the normal working plan.
-        if (array_key_exists($date, $working_plan_exceptions)) {
-            $date_working_plan = $working_plan_exceptions[$date];
-        }
+            if (array_key_exists($date, $working_plan_exceptions)) {
+                $date_working_plan = $working_plan_exceptions[$date];
+            }
 
-        if (!$date_working_plan) {
-            return [];
+            if (!$date_working_plan) {
+                return [];
+            }
+        } else {
+            $date_working_plan = $working_plan[$working_day] ?? null;
+
+            // Search if the $date is a custom availability period added outside the normal working plan.
+            if (array_key_exists($date, $working_plan_exceptions)) {
+                $date_working_plan = $working_plan_exceptions[$date];
+            }
+
+            if (!$date_working_plan) {
+                return [];
+            }
         }
 
         $periods = [];
