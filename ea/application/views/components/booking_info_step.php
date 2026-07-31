@@ -10,14 +10,6 @@
  * @var string $require_email
  * @var string $display_phone_number
  * @var string $require_phone_number
- * @var string $display_address
- * @var string $require_address
- * @var string $display_city
- * @var string $require_city
- * @var string $display_zip_code
- * @var string $require_zip_code
- * @var string $display_notes
- * @var string $require_notes
  */
 ?>
 
@@ -85,55 +77,6 @@
             </div>
 
             <div class="col-12 col-lg-6 field-col mx-auto">
-                <?php if ($display_address): ?>
-                    <div class="mb-3">
-                        <label for="address" class="form-label">
-                            <?= lang('address') ?>
-                            <?php if ($require_address): ?>
-                                <span class="text-danger">*</span>
-                            <?php endif; ?>
-                        </label>
-                        <input type="text" id="address" class="<?= $require_address ? 'required' : '' ?> form-control"
-                               maxlength="120"/>
-                    </div>
-                <?php endif; ?>
-                <?php if ($display_city): ?>
-                    <div class="mb-3">
-                        <label for="city" class="form-label">
-                            <?= lang('city') ?>
-                            <?php if ($require_city): ?>
-                                <span class="text-danger">*</span>
-                            <?php endif; ?>
-                        </label>
-                        <input type="text" id="city" class="<?= $require_city ? 'required' : '' ?> form-control"
-                               maxlength="120"/>
-                    </div>
-                <?php endif; ?>
-                <?php if ($display_zip_code): ?>
-                    <div class="mb-3">
-                        <label for="zip-code" class="form-label">
-                            <?= lang('zip_code') ?>
-                            <?php if ($require_zip_code): ?>
-                                <span class="text-danger">*</span>
-                            <?php endif; ?>
-                        </label>
-                        <input type="text" id="zip-code" class="<?= $require_zip_code ? 'required' : '' ?> form-control"
-                               maxlength="120"/>
-                    </div>
-                <?php endif; ?>
-                <?php if ($display_notes): ?>
-                    <div class="mb-3">
-                        <label for="notes" class="form-label">
-                            <?= lang('notes') ?>
-                            <?php if ($require_notes): ?>
-                                <span class="text-danger">*</span>
-                            <?php endif; ?>
-                        </label>
-                        <textarea id="notes" maxlength="500"
-                                  class="<?= $require_notes ? 'required' : '' ?> form-control" rows="1"></textarea>
-                    </div>
-                <?php endif; ?>
-
                 <?php if (!vars('manage_mode')): ?>
                 <div class="mb-3">
                     <div class="form-check">
@@ -147,7 +90,6 @@
                     </div>
                 </div>
                 <?php endif; ?>
-
             </div>
 
         </div>
