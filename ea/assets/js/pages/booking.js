@@ -20,15 +20,10 @@ App.Pages.Booking = (function () {
     const $selectDate = $('#select-date');
     const $selectService = $('#select-service');
     const $selectProvider = $('#select-provider');
-    const $selectTimezone = $('#select-timezone');
     const $firstName = $('#first-name');
     const $lastName = $('#last-name');
     const $email = $('#email');
     const $phoneNumber = $('#phone-number');
-    const $address = $('#address');
-    const $city = $('#city');
-    const $zipCode = $('#zip-code');
-    const $notes = $('#notes');
     const $captchaTitle = $('.captcha-title');
     const $availableHours = $('#available-hours');
     const $bookAppointmentSubmit = $('#book-appointment-submit');
@@ -168,9 +163,7 @@ App.Pages.Booking = (function () {
 
         App.Utils.UI.setDateTimePickerValue($selectDate, new Date());
 
-        const browserTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-        const isTimezoneSupported = $selectTimezone.find(`option[value="${browserTimezone}"]`).length > 0;
-        $selectTimezone.val(isTimezoneSupported ? browserTimezone : 'UTC');
+
 
         // Bind the event handlers (might not be necessary every time we use this class).
         addEventListeners();
@@ -264,9 +257,7 @@ App.Pages.Booking = (function () {
             prefillFromQueryParam('#last-name', 'last_name');
             prefillFromQueryParam('#email', 'email');
             prefillFromQueryParam('#phone-number', 'phone');
-            prefillFromQueryParam('#address', 'address');
-            prefillFromQueryParam('#city', 'city');
-            prefillFromQueryParam('#zip-code', 'zip');
+
 
             // Initialize remember me after prefilling from query params
             initializeRememberMe();
@@ -323,20 +314,7 @@ App.Pages.Booking = (function () {
      * Add the page event listeners.
      */
     function addEventListeners() {
-        /**
-         * Event: Timezone "Changed"
-         */
-        $selectTimezone.on('change', () => {
-            const date = App.Utils.UI.getDateTimePickerValue($selectDate);
 
-            if (!date) {
-                return;
-            }
-
-            App.Http.Booking.getAvailableHours(moment(date).format('YYYY-MM-DD'));
-
-            App.Pages.Booking.updateConfirmFrame();
-        });
 
         /**
          * Event: Selected Provider "Changed"
@@ -726,8 +704,6 @@ App.Pages.Booking = (function () {
                 selectedTime;
         }
 
-        const timezoneOptionText = $selectTimezone.find('option:selected').text();
-
         $('#appointment-details').html(`
             <div>
                 <div class="mb-2 fw-bold fs-3">
@@ -744,10 +720,6 @@ App.Pages.Booking = (function () {
                     <i class="fas fa-clock me-2"></i>
                     ${service.duration} ${lang('minutes')}
                 </div>
-                <div class="mb-2">
-                    <i class="fas fa-globe me-2"></i>
-                    ${timezoneOptionText}
-                </div> 
                 <div class="mb-2" ${!Number(service.price) ? 'hidden' : ''}>
                     <i class="fas fa-cash-register me-2"></i>
                     ${Number(service.price).toFixed(2)} ${service.currency}
@@ -762,20 +734,6 @@ App.Pages.Booking = (function () {
         const fullName = `${firstName} ${lastName}`.trim();
         const email = App.Utils.String.escapeHtml($email.val());
         const phoneNumber = App.Utils.String.escapeHtml($phoneNumber.val());
-        const address = App.Utils.String.escapeHtml($address.val());
-        const city = App.Utils.String.escapeHtml($city.val());
-        const zipCode = App.Utils.String.escapeHtml($zipCode.val());
-
-        const addressParts = [];
-
-        if (city) {
-            addressParts.push(city);
-        }
-
-        if (zipCode) {
-            addressParts.push(zipCode);
-        }
-
         $('#customer-details').html(`
             <div>
                 <div class="mb-2 fw-bold fs-3">
@@ -790,12 +748,6 @@ App.Pages.Booking = (function () {
                 <div class="mb-2" ${!phoneNumber ? 'hidden' : ''}>
                     ${phoneNumber}
                 </div>
-                <div class="mb-2" ${!address ? 'hidden' : ''}>
-                    ${address}
-                </div>
-                <div class="mb-2" ${!addressParts.length ? 'hidden' : ''}>
-                    ${addressParts.join(', ')}
-                </div>
             </div>
         `);
 
@@ -808,10 +760,6 @@ App.Pages.Booking = (function () {
             first_name: $firstName.val(),
             email: $email.val(),
             phone_number: $phoneNumber.val(),
-            address: $address.val(),
-            city: $city.val(),
-            zip_code: $zipCode.val(),
-            timezone: $selectTimezone.val(),
             custom_field_1: $customField1.val(),
             custom_field_2: $customField2.val(),
             custom_field_3: $customField3.val(),
@@ -826,7 +774,6 @@ App.Pages.Booking = (function () {
                 moment($('.selected-hour').data('value'), 'HH:mm').format('HH:mm') +
                 ':00',
             end_datetime: calculateEndDatetime(),
-            notes: $notes.val(),
             is_unavailability: false,
             id_users_provider: $selectProvider.val(),
             id_services: $selectService.val(),
@@ -909,14 +856,6 @@ App.Pages.Booking = (function () {
             $firstName.val(customer.first_name);
             $email.val(customer.email);
             $phoneNumber.val(customer.phone_number);
-            $address.val(customer.address);
-            $city.val(customer.city);
-            $zipCode.val(customer.zip_code);
-            if (customer.timezone) {
-                $selectTimezone.val(customer.timezone);
-            }
-            const appointmentNotes = appointment.notes !== null ? appointment.notes : '';
-            $notes.val(appointmentNotes);
 
             $customField1.val(customer.custom_field_1);
             $customField2.val(customer.custom_field_2);
@@ -1002,9 +941,6 @@ App.Pages.Booking = (function () {
             lastName: $lastName.val(),
             email: $email.val(),
             phoneNumber: $phoneNumber.val(),
-            address: $address.val(),
-            city: $city.val(),
-            zipCode: $zipCode.val(),
             customField1: $customField1.val(),
             customField2: $customField2.val(),
             customField3: $customField3.val(),
@@ -1054,15 +990,6 @@ App.Pages.Booking = (function () {
             }
             if (!urlParams.has('phone_number') && !$phoneNumber.val()) {
                 $phoneNumber.val(customerInfo.phoneNumber || '');
-            }
-            if (!urlParams.has('address') && !$address.val()) {
-                $address.val(customerInfo.address || '');
-            }
-            if (!urlParams.has('city') && !$city.val()) {
-                $city.val(customerInfo.city || '');
-            }
-            if (!urlParams.has('zip_code') && !$zipCode.val()) {
-                $zipCode.val(customerInfo.zipCode || '');
             }
             if (!urlParams.has('custom_field_1') && !$customField1.val()) {
                 $customField1.val(customerInfo.customField1 || '');
