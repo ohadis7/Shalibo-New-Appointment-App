@@ -18,7 +18,6 @@ $customer_last_name = trim((string) ($customer['last_name'] ?? ''));
 $customer_full_name = trim($customer_first_name . ' ' . $customer_last_name);
 $customer_email = trim((string) ($customer['email'] ?? ''));
 $customer_phone_number = trim((string) ($customer['phone_number'] ?? ''));
-$customer_address = trim((string) ($customer['address'] ?? ''));
 ?>
 
 <!doctype html>
@@ -456,15 +455,6 @@ $customer_address = trim((string) ($customer['address'] ?? ''));
 
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td class="label" style="padding: 3px;font-weight: bold;">
-                                                    <?= lang('timezone') ?>
-                                                </td>
-                                                <td style="padding: 3px;">
-                                                    <?= format_timezone($timezone) ?>
-                                                </td>
-                                            </tr>
-
                                             <?php if (!empty($appointment['status'])): ?>
                                                 <tr>
                                                     <td class="label" style="padding: 3px;font-weight: bold;">
@@ -569,17 +559,6 @@ $customer_address = trim((string) ($customer['address'] ?? ''));
                                                     </td>
                                                     <td style="padding: 3px;">
                                                         <?= e($customer_phone_number) ?>
-                                                    </td>
-                                                </tr>
-                                            <?php endif; ?>
-
-                                            <?php if ($customer_address !== ''): ?>
-                                                <tr>
-                                                    <td class="label" style="padding: 3px;font-weight: bold;">
-                                                        <?= lang('address') ?>
-                                                    </td>
-                                                    <td style="padding: 3px;">
-                                                        <?= e($customer_address) ?>
                                                     </td>
                                                 </tr>
                                             <?php endif; ?>
