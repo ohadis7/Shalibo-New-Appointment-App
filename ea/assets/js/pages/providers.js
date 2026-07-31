@@ -207,6 +207,7 @@ App.Pages.Providers = (function () {
                     working_plan_exceptions: JSON.stringify(workingPlanManager.getWorkingPlanExceptions()),
                     notifications: Number($notifications.prop('checked')),
                     calendar_view: $calendarView.val(),
+                    date_whitelist_enabled: Number($('#date-whitelist-enabled').prop('checked')),
                 },
             };
 
@@ -397,6 +398,8 @@ App.Pages.Providers = (function () {
         $providers.find('.add-break, .add-working-plan-exception, #reset-working-plan').prop('disabled', true);
 
         workingPlanManager.timepickers(true);
+        $('#date-whitelist-enabled').prop('checked', false).prop('disabled', true);
+
         $providers.find('#providers .working-plan input:checkbox').prop('disabled', true);
         $('.breaks').find('.edit-break, .delete-break').prop('disabled', true);
         $('.working-plan-exceptions')
@@ -505,6 +508,8 @@ App.Pages.Providers = (function () {
         $('.working-plan-exceptions')
             .find('.edit-working-plan-exception, .delete-working-plan-exception')
             .prop('disabled', true);
+        $('#date-whitelist-enabled').prop('checked', Number(provider.settings.date_whitelist_enabled) ? true : false);
+
         $providers.find('.working-plan input:checkbox').prop('disabled', true);
     }
 
