@@ -26,12 +26,7 @@ App.Components.AppointmentsModal = (function () {
     const $lastName = $('#last-name');
     const $email = $('#email');
     const $phoneNumber = $('#phone-number');
-    const $address = $('#address');
-    const $city = $('#city');
-    const $zipCode = $('#zip-code');
     const $language = $('#language');
-    const $timezone = $('#timezone');
-    const $customerNotes = $('#customer-notes');
     const $selectCustomer = $('#select-customer');
     const $saveAppointment = $('#save-appointment');
     const $appointmentId = $('#appointment-id');
@@ -39,7 +34,6 @@ App.Components.AppointmentsModal = (function () {
     const $appointmentMeetingLink = $('#appointment-meeting-link');
     const $appointmentStatus = $('#appointment-status');
     const $appointmentColor = $('#appointment-color');
-    const $appointmentNotes = $('#appointment-notes');
     const $reloadAppointments = $('#reload-appointments');
     const $selectFilterItem = $('#select-filter-item');
     const $selectService = $('#select-service');
@@ -54,21 +48,6 @@ App.Components.AppointmentsModal = (function () {
     const $customField5 = $('#custom-field-5');
 
     const moment = window.moment;
-
-    /**
-     * Update the displayed timezone.
-     */
-    function updateTimezone() {
-        const providerId = $selectProvider.val();
-
-        const provider = vars('available_providers').find(
-            (availableProvider) => Number(availableProvider.id) === Number(providerId),
-        );
-
-        if (provider && provider.timezone) {
-            $('.provider-timezone').text(vars('timezones')[provider.timezone]);
-        }
-    }
 
     /**
      * Add the component event listeners.
@@ -103,7 +82,6 @@ App.Components.AppointmentsModal = (function () {
                 meeting_link: $appointmentMeetingLink.val(),
                 color: App.Components.ColorSelection.getColor($appointmentColor),
                 status: $appointmentStatus.val(),
-                notes: $appointmentNotes.val(),
                 is_unavailability: Number(false),
             };
 
@@ -117,12 +95,7 @@ App.Components.AppointmentsModal = (function () {
                 last_name: $lastName.val(),
                 email: $email.val(),
                 phone_number: $phoneNumber.val(),
-                address: $address.val(),
-                city: $city.val(),
-                zip_code: $zipCode.val(),
                 language: $language.val(),
-                timezone: $timezone.val(),
-                notes: $customerNotes.val(),
                 custom_field_1: $customField1.val(),
                 custom_field_2: $customField2.val(),
                 custom_field_3: $customField3.val(),
@@ -327,12 +300,7 @@ App.Components.AppointmentsModal = (function () {
                 $lastName.val(customer.last_name);
                 $email.val(customer.email);
                 $phoneNumber.val(customer.phone_number);
-                $address.val(customer.address);
-                $city.val(customer.city);
-                $zipCode.val(customer.zip_code);
                 $language.val(customer.language);
-                $timezone.val(customer.timezone);
-                $customerNotes.val(customer.notes);
                 $customField1.val(customer.custom_field_1);
                 $customField2.val(customer.custom_field_2);
                 $customField3.val(customer.custom_field_3);
@@ -393,11 +361,7 @@ App.Components.AppointmentsModal = (function () {
                                 customer.first_name.toLowerCase().indexOf(keyword) !== -1 ||
                                 customer.last_name.toLowerCase().indexOf(keyword) !== -1 ||
                                 customer.email.toLowerCase().indexOf(keyword) !== -1 ||
-                                customer.phone_number.toLowerCase().indexOf(keyword) !== -1 ||
-                                customer.address.toLowerCase().indexOf(keyword) !== -1 ||
-                                customer.city.toLowerCase().indexOf(keyword) !== -1 ||
-                                customer.zip_code.toLowerCase().indexOf(keyword) !== -1 ||
-                                customer.notes.toLowerCase().indexOf(keyword) !== -1
+                                customer.phone_number.toLowerCase().indexOf(keyword) !== -1
                             ) {
                                 $('<div/>', {
                                     'data-id': customer.id,
@@ -474,13 +438,6 @@ App.Components.AppointmentsModal = (function () {
         });
 
         /**
-         * Event: Provider "Change"
-         */
-        $selectProvider.on('change', () => {
-            updateTimezone();
-        });
-
-        /**
          * Event: Enter New Customer Button "Click"
          */
         $newCustomer.on('click', () => {
@@ -489,12 +446,7 @@ App.Components.AppointmentsModal = (function () {
             $lastName.val('');
             $email.val('');
             $phoneNumber.val('');
-            $address.val('');
-            $city.val('');
-            $zipCode.val('');
             $language.val(vars('default_language'));
-            $timezone.val(vars('default_timezone'));
-            $customerNotes.val('');
             $customField1.val('');
             $customField2.val('');
             $customField3.val('');
@@ -519,7 +471,6 @@ App.Components.AppointmentsModal = (function () {
         $appointmentStatus.val(defaultStatusValue);
 
         $language.val(vars('default_language'));
-        $timezone.val(vars('default_timezone'));
 
         // Reset color.
         $appointmentColor.find('.color-selection-option:first').trigger('click');
