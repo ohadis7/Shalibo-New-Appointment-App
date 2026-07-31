@@ -160,43 +160,7 @@
                                     <input id="end-datetime" class="required form-control">
                                 </div>
 
-                                <div class="mb-3">
-                                    <label class="form-label">
-                                        <?= lang('timezone') ?>
-                                    </label>
 
-                                    <div
-                                        class="border rounded d-flex justify-content-between align-items-center bg-light timezone-info">
-                                        <div class="border-end w-50 p-1 text-center">
-                                            <small>
-                                                <?= lang('provider') ?>:
-                                                <span class="provider-timezone">
-                                                    -
-                                                </span>
-                                            </small>
-                                        </div>
-                                        <div class="w-50 p-1 text-center">
-                                            <small>
-                                                <?= lang('current_user') ?>:
-                                                <span>
-                                                    <?= $timezones[session('timezone', 'UTC')] ?>
-                                                </span>
-                                            </small>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="appointment-notes" class="form-label">
-                                        <?= lang('notes') ?>
-                                        <?php if ($require_notes): ?>
-                                            <span class="text-danger">*</span>
-                                        <?php endif; ?>
-                                    </label>
-                                    <textarea id="appointment-notes" class="<?= $require_notes
-                                        ? 'required'
-                                        : '' ?> form-control" rows="3"></textarea>
-                                </div>
 
                             </div>
                         </div>
@@ -295,60 +259,7 @@
                                 <?php component('custom_fields'); ?>
 
                             </div>
-                            <div class="col-12 col-sm-6">
-                                <div class="mb-3">
-                                    <label for="address" class="form-label">
-                                        <?= lang('address') ?>
-                                        <?php if ($require_address): ?>
-                                            <span class="text-danger">*</span>
-                                        <?php endif; ?>
-                                    </label>
-                                    <input type="text" id="address"
-                                           class="<?= $require_address ? 'required' : '' ?> form-control"
-                                           maxlength="120"/>
-                                </div>
 
-                                <div class="mb-3">
-                                    <label for="city" class="form-label">
-                                        <?= lang('city') ?>
-                                        <?php if ($require_city): ?>
-                                            <span class="text-danger">*</span>
-                                        <?php endif; ?>
-                                    </label>
-                                    <input type="text" id="city"
-                                           class="<?= $require_city ? 'required' : '' ?> form-control"
-                                           maxlength="120"/>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="zip-code" class="form-label">
-                                        <?= lang('zip_code') ?>
-                                        <?php if ($require_zip_code): ?>
-                                            <span class="text-danger">*</span>
-                                        <?php endif; ?>
-                                    </label>
-                                    <input type="text" id="zip-code"
-                                           class="<?= $require_zip_code ? 'required' : '' ?> form-control"
-                                           maxlength="120"/>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label" for="timezone">
-                                        <?= lang('timezone') ?>
-                                        <span class="text-danger" hidden>*</span>
-                                    </label>
-                                    <?php component('timezone_dropdown', [
-                                        'attributes' => 'id="timezone" class="form-select required"',
-                                        'grouped_timezones' => vars('grouped_timezones'),
-                                    ]); ?>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="customer-notes" class="form-label">
-                                        <?= lang('notes') ?>
-                                    </label>
-                                    <textarea id="customer-notes" rows="3" class="form-control"></textarea>
-                                </div>
 
                             </div>
                         </div>
