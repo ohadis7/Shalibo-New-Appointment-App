@@ -4,8 +4,9 @@ import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { extractListings, extractFromHtml } from '../src/parse.js';
 import { valueListings } from '../src/valuation.js';
-import { applyFilters, scoreListings } from '../src/score.js';
+import { applyFilters, scoreListings, matchesModel } from '../src/score.js';
 import { buildHtml } from '../src/report.js';
+import { sanityCheck, feedUrl, pageUrl } from '../src/yad2.js';
 import { loadConfig } from '../src/config.js';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
@@ -63,6 +64,53 @@ ok('all three planted bargains rank in the top 6', ['bargain01', 'bargain02', 'b
 ok('stale ad gets a negotiation hint', s('bargain01').flags.some((f) => /מיקוח/.test(f.text)));
 ok('leasing ownership adds risk and a flag', s('leasing01').risk >= 10 && s('leasing01').flags.some((f) => /ליסינג/.test(f.text)), String(s('leasing01').risk));
 ok('good history text offsets some risk', s('leasing01').flags.some((f) => f.level === 'good'));
+
+// --- mixed segment / model patterns -------------------------------------
+const preset = loadConfig(resolve(HERE, '..', 'config.hatchback.example.json'));
+const mixed = extractListings(
+  JSON.parse(readFileSync(resolve(HERE, '..', 'fixtures', 'mixed-segment.json'), 'utf8')),
+  'mixed'
+);
+ok('reads the mixed-manufacturer harvest', mixed.length === 104, `got ${mixed.length}`);
+ok('matchesModel finds Yaris by Hebrew name', matchesModel({ manufacturer: 'טויוטה', model: 'יאריס' }, preset.filters.modelPatterns));
+ok('matchesModel finds Jazz with a straight apostrophe', matchesModel({ manufacturer: 'הונדה', model: "ג'אז" }, preset.filters.modelPatterns));
+ok('matchesModel rejects an off-segment SUV', !matchesModel({ manufacturer: 'טויוטה', model: 'לנד קרוזר' }, preset.filters.modelPatterns));
+ok('no patterns means no filtering', matchesModel({ manufacturer: 'x', model: 'y' }, []));
+
+valueListings(mixed, preset.scoring);
+const segment = applyFilters(mixed, preset.filters).kept;
+const inSegment = mixed.filter((l) => matchesModel(l, preset.filters.modelPatterns));
+ok('the nine off-segment cars are recognised as such', mixed.length - inSegment.length === 9, `${mixed.length - inSegment.length}`);
+ok('every survivor is in the segment', segment.every((l) => matchesModel(l, preset.filters.modelPatterns)));
+ok('no SUV survives the segment filter', !segment.some((l) => /ספורטאז|לנד קרוזר|טוסון/.test(l.model)));
+ok('within the segment only the over-km cars are dropped',
+   inSegment.length - segment.length === inSegment.filter((l) => l.km > preset.filters.kmMax).length,
+   `kept ${segment.length} of ${inSegment.length}`);
+
+const cohorts = new Set(segment.map((l) => l.valuation.cohortKey));
+ok('each model is priced in its own cohort', cohorts.size === 5, [...cohorts].join(' / '));
+ok('a Yaris is never compared to a Jazz', segment.filter((l) => l.model === 'יאריס').every((l) => l.valuation.cohortKey.includes('יאריס')));
+
+scoreListings(segment, preset.scoring);
+const planted = ['יאריס', 'אוריס', "ג'אז", 'סוויפט', 'i20'].map((mdl) => segment.find((l) => l.id === `deal-${mdl}`));
+ok('every planted per-model bargain is found', planted.every(Boolean));
+ok('each planted bargain reads ~20% under its own cohort', planted.every((l) => l.valuation.deltaPct < -12), planted.map((l) => l.valuation.deltaPct).join(', '));
+ok('all five planted bargains land in the top 10', planted.every((l) => segment.slice(0, 10).includes(l)), segment.slice(0, 10).map((l) => l.id).join(','));
+
+// --- stale-id sanity check ----------------------------------------------
+const yarisSearch = { name: 'טויוטה', expect: ['יאריס|yaris', 'אוריס|auris'] };
+ok('a matching harvest raises no warning', sanityCheck(yarisSearch, mixed.filter((l) => /יאריס|אוריס/.test(l.model))) === null);
+const wrongIds = mixed.filter((l) => /ספורטאז|טוסון|לנד קרוזר/.test(l.model));
+const warning = sanityCheck(yarisSearch, wrongIds);
+ok('a wrong manufacturer id is caught', typeof warning === 'string' && /קוד יצרן/.test(warning));
+ok('the warning names what came back instead', warning.includes('ספורטאז') || warning.includes('טוסון') || warning.includes('לנד קרוזר'));
+ok('an empty harvest raises no warning', sanityCheck(yarisSearch, []) === null);
+ok('a search with no expectation raises no warning', sanityCheck({ name: 'x' }, wrongIds) === null);
+
+// --- url building --------------------------------------------------------
+ok('page 1 carries no page param', !pageUrl('https://www.yad2.co.il/vehicles/cars?manufacturer=19', 1).includes('page='));
+ok('page 2 does', pageUrl('https://www.yad2.co.il/vehicles/cars?manufacturer=19', 2).endsWith('page=2'));
+ok('feed url keeps the search params', feedUrl('https://www.yad2.co.il/vehicles/cars?manufacturer=19&year=2015-2022', 1) === 'https://gw.yad2.co.il/vehicles-feed/cars?manufacturer=19&year=2015-2022');
 
 // --- report ------------------------------------------------------------
 for (const l of scored) l.history = { isNew: true, priceChange: 0 };

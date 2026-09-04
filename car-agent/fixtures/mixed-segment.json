@@ -1,0 +1,5000 @@
+{
+  "data": {
+    "feed": {
+      "feed_items": [
+        {
+          "token": "mix001",
+          "adNumber": "mix001",
+          "price": 39795,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "יאריס"
+          },
+          "subModel": {
+            "text": "1.5 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2016
+          },
+          "km": 108493,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-21T21:03:12.203Z",
+            "updatedAt": "2026-08-21T21:03:12.203Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix002",
+          "adNumber": "mix002",
+          "price": 39821,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "יאריס"
+          },
+          "subModel": {
+            "text": "1.5 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2016
+          },
+          "km": 105179,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-15T21:03:12.203Z",
+            "updatedAt": "2026-08-15T21:03:12.203Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix003",
+          "adNumber": "mix003",
+          "price": 37687,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "יאריס"
+          },
+          "subModel": {
+            "text": "1.5 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2016
+          },
+          "km": 137180,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-09-03T21:03:12.203Z",
+            "updatedAt": "2026-09-03T21:03:12.203Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix004",
+          "adNumber": "mix004",
+          "price": 42243,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "יאריס"
+          },
+          "subModel": {
+            "text": "1.5 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2017
+          },
+          "km": 150610,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-26T21:03:12.203Z",
+            "updatedAt": "2026-08-26T21:03:12.203Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix005",
+          "adNumber": "mix005",
+          "price": 43097,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "יאריס"
+          },
+          "subModel": {
+            "text": "1.5 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2017
+          },
+          "km": 123988,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-18T21:03:12.203Z",
+            "updatedAt": "2026-08-18T21:03:12.203Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix006",
+          "adNumber": "mix006",
+          "price": 48862,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "יאריס"
+          },
+          "subModel": {
+            "text": "1.5 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2017
+          },
+          "km": 98659,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-14T21:03:12.203Z",
+            "updatedAt": "2026-08-14T21:03:12.203Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix007",
+          "adNumber": "mix007",
+          "price": 48690,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "יאריס"
+          },
+          "subModel": {
+            "text": "1.5 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2018
+          },
+          "km": 144898,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-31T21:03:12.203Z",
+            "updatedAt": "2026-08-31T21:03:12.203Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix008",
+          "adNumber": "mix008",
+          "price": 50390,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "יאריס"
+          },
+          "subModel": {
+            "text": "1.5 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2018
+          },
+          "km": 132145,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-26T21:03:12.203Z",
+            "updatedAt": "2026-08-26T21:03:12.203Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix009",
+          "adNumber": "mix009",
+          "price": 50891,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "יאריס"
+          },
+          "subModel": {
+            "text": "1.5 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2018
+          },
+          "km": 85076,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-18T21:03:12.203Z",
+            "updatedAt": "2026-08-18T21:03:12.203Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix010",
+          "adNumber": "mix010",
+          "price": 56033,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "יאריס"
+          },
+          "subModel": {
+            "text": "1.5 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 121880,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-29T21:03:12.203Z",
+            "updatedAt": "2026-08-29T21:03:12.203Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix011",
+          "adNumber": "mix011",
+          "price": 58495,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "יאריס"
+          },
+          "subModel": {
+            "text": "1.5 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 123874,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-22T21:03:12.203Z",
+            "updatedAt": "2026-08-22T21:03:12.203Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix012",
+          "adNumber": "mix012",
+          "price": 53342,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "יאריס"
+          },
+          "subModel": {
+            "text": "1.5 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 100966,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-15T21:03:12.203Z",
+            "updatedAt": "2026-08-15T21:03:12.203Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix013",
+          "adNumber": "mix013",
+          "price": 67697,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "יאריס"
+          },
+          "subModel": {
+            "text": "1.5 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2020
+          },
+          "km": 57558,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-28T21:03:12.204Z",
+            "updatedAt": "2026-08-28T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix014",
+          "adNumber": "mix014",
+          "price": 67069,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "יאריס"
+          },
+          "subModel": {
+            "text": "1.5 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2020
+          },
+          "km": 64336,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-25T21:03:12.204Z",
+            "updatedAt": "2026-08-25T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix015",
+          "adNumber": "mix015",
+          "price": 63997,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "יאריס"
+          },
+          "subModel": {
+            "text": "1.5 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2020
+          },
+          "km": 58001,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-09-02T21:03:12.204Z",
+            "updatedAt": "2026-09-02T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix016",
+          "adNumber": "mix016",
+          "price": 70055,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "יאריס"
+          },
+          "subModel": {
+            "text": "1.5 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2021
+          },
+          "km": 83704,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-14T21:03:12.204Z",
+            "updatedAt": "2026-08-14T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix017",
+          "adNumber": "mix017",
+          "price": 77330,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "יאריס"
+          },
+          "subModel": {
+            "text": "1.5 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2021
+          },
+          "km": 53833,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-23T21:03:12.204Z",
+            "updatedAt": "2026-08-23T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix018",
+          "adNumber": "mix018",
+          "price": 71617,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "יאריס"
+          },
+          "subModel": {
+            "text": "1.5 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2021
+          },
+          "km": 67839,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-16T21:03:12.204Z",
+            "updatedAt": "2026-08-16T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "deal-יאריס",
+          "adNumber": "deal-יאריס",
+          "price": 48676,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "יאריס"
+          },
+          "subModel": {
+            "text": "1.5 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 58000,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-11T21:03:12.204Z",
+            "updatedAt": "2026-08-11T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix019",
+          "adNumber": "mix019",
+          "price": 40261,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "אוריס"
+          },
+          "subModel": {
+            "text": "1.8 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2016
+          },
+          "km": 134545,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-09-03T21:03:12.204Z",
+            "updatedAt": "2026-09-03T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix020",
+          "adNumber": "mix020",
+          "price": 39182,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "אוריס"
+          },
+          "subModel": {
+            "text": "1.8 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2016
+          },
+          "km": 157623,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-16T21:03:12.204Z",
+            "updatedAt": "2026-08-16T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix021",
+          "adNumber": "mix021",
+          "price": 38119,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "אוריס"
+          },
+          "subModel": {
+            "text": "1.8 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2016
+          },
+          "km": 198844,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-31T21:03:12.204Z",
+            "updatedAt": "2026-08-31T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix022",
+          "adNumber": "mix022",
+          "price": 47201,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "אוריס"
+          },
+          "subModel": {
+            "text": "1.8 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2017
+          },
+          "km": 87023,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-21T21:03:12.204Z",
+            "updatedAt": "2026-08-21T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix023",
+          "adNumber": "mix023",
+          "price": 42880,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "אוריס"
+          },
+          "subModel": {
+            "text": "1.8 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2017
+          },
+          "km": 135347,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-15T21:03:12.204Z",
+            "updatedAt": "2026-08-15T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix024",
+          "adNumber": "mix024",
+          "price": 42347,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "אוריס"
+          },
+          "subModel": {
+            "text": "1.8 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2017
+          },
+          "km": 111921,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-13T21:03:12.204Z",
+            "updatedAt": "2026-08-13T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix025",
+          "adNumber": "mix025",
+          "price": 47680,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "אוריס"
+          },
+          "subModel": {
+            "text": "1.8 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2018
+          },
+          "km": 153878,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-13T21:03:12.204Z",
+            "updatedAt": "2026-08-13T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix026",
+          "adNumber": "mix026",
+          "price": 48766,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "אוריס"
+          },
+          "subModel": {
+            "text": "1.8 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2018
+          },
+          "km": 91189,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-14T21:03:12.204Z",
+            "updatedAt": "2026-08-14T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix027",
+          "adNumber": "mix027",
+          "price": 49874,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "אוריס"
+          },
+          "subModel": {
+            "text": "1.8 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2018
+          },
+          "km": 146812,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-22T21:03:12.204Z",
+            "updatedAt": "2026-08-22T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix028",
+          "adNumber": "mix028",
+          "price": 61162,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "אוריס"
+          },
+          "subModel": {
+            "text": "1.8 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 73700,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-29T21:03:12.204Z",
+            "updatedAt": "2026-08-29T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix029",
+          "adNumber": "mix029",
+          "price": 58920,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "אוריס"
+          },
+          "subModel": {
+            "text": "1.8 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 87034,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-16T21:03:12.204Z",
+            "updatedAt": "2026-08-16T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix030",
+          "adNumber": "mix030",
+          "price": 60016,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "אוריס"
+          },
+          "subModel": {
+            "text": "1.8 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 79762,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-23T21:03:12.204Z",
+            "updatedAt": "2026-08-23T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix031",
+          "adNumber": "mix031",
+          "price": 68837,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "אוריס"
+          },
+          "subModel": {
+            "text": "1.8 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2020
+          },
+          "km": 56847,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-11T21:03:12.204Z",
+            "updatedAt": "2026-08-11T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix032",
+          "adNumber": "mix032",
+          "price": 63594,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "אוריס"
+          },
+          "subModel": {
+            "text": "1.8 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2020
+          },
+          "km": 96672,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-09-04T21:03:12.204Z",
+            "updatedAt": "2026-09-04T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix033",
+          "adNumber": "mix033",
+          "price": 62303,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "אוריס"
+          },
+          "subModel": {
+            "text": "1.8 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2020
+          },
+          "km": 105493,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-16T21:03:12.204Z",
+            "updatedAt": "2026-08-16T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix034",
+          "adNumber": "mix034",
+          "price": 70125,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "אוריס"
+          },
+          "subModel": {
+            "text": "1.8 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2021
+          },
+          "km": 65836,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-21T21:03:12.204Z",
+            "updatedAt": "2026-08-21T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix035",
+          "adNumber": "mix035",
+          "price": 73800,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "אוריס"
+          },
+          "subModel": {
+            "text": "1.8 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2021
+          },
+          "km": 64176,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-16T21:03:12.204Z",
+            "updatedAt": "2026-08-16T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix036",
+          "adNumber": "mix036",
+          "price": 71062,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "אוריס"
+          },
+          "subModel": {
+            "text": "1.8 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2021
+          },
+          "km": 90811,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-25T21:03:12.204Z",
+            "updatedAt": "2026-08-25T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "deal-אוריס",
+          "adNumber": "deal-אוריס",
+          "price": 48676,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "אוריס"
+          },
+          "subModel": {
+            "text": "1.8 Hybrid אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 58000,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-11T21:03:12.204Z",
+            "updatedAt": "2026-08-11T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix037",
+          "adNumber": "mix037",
+          "price": 36983,
+          "manufacturer": {
+            "id": 0,
+            "text": "הונדה"
+          },
+          "model": {
+            "id": 0,
+            "text": "ג'אז"
+          },
+          "subModel": {
+            "text": "1.3 Comfort אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2016
+          },
+          "km": 93186,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-28T21:03:12.204Z",
+            "updatedAt": "2026-08-28T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix038",
+          "adNumber": "mix038",
+          "price": 35963,
+          "manufacturer": {
+            "id": 0,
+            "text": "הונדה"
+          },
+          "model": {
+            "id": 0,
+            "text": "ג'אז"
+          },
+          "subModel": {
+            "text": "1.3 Comfort אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2016
+          },
+          "km": 106761,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-22T21:03:12.204Z",
+            "updatedAt": "2026-08-22T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix039",
+          "adNumber": "mix039",
+          "price": 32467,
+          "manufacturer": {
+            "id": 0,
+            "text": "הונדה"
+          },
+          "model": {
+            "id": 0,
+            "text": "ג'אז"
+          },
+          "subModel": {
+            "text": "1.3 Comfort אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2016
+          },
+          "km": 174077,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-15T21:03:12.204Z",
+            "updatedAt": "2026-08-15T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix040",
+          "adNumber": "mix040",
+          "price": 41448,
+          "manufacturer": {
+            "id": 0,
+            "text": "הונדה"
+          },
+          "model": {
+            "id": 0,
+            "text": "ג'אז"
+          },
+          "subModel": {
+            "text": "1.3 Comfort אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2017
+          },
+          "km": 128504,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-24T21:03:12.204Z",
+            "updatedAt": "2026-08-24T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix041",
+          "adNumber": "mix041",
+          "price": 39026,
+          "manufacturer": {
+            "id": 0,
+            "text": "הונדה"
+          },
+          "model": {
+            "id": 0,
+            "text": "ג'אז"
+          },
+          "subModel": {
+            "text": "1.3 Comfort אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2017
+          },
+          "km": 115776,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-19T21:03:12.204Z",
+            "updatedAt": "2026-08-19T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix042",
+          "adNumber": "mix042",
+          "price": 37226,
+          "manufacturer": {
+            "id": 0,
+            "text": "הונדה"
+          },
+          "model": {
+            "id": 0,
+            "text": "ג'אז"
+          },
+          "subModel": {
+            "text": "1.3 Comfort אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2017
+          },
+          "km": 175238,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-09-01T21:03:12.204Z",
+            "updatedAt": "2026-09-01T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix043",
+          "adNumber": "mix043",
+          "price": 46911,
+          "manufacturer": {
+            "id": 0,
+            "text": "הונדה"
+          },
+          "model": {
+            "id": 0,
+            "text": "ג'אז"
+          },
+          "subModel": {
+            "text": "1.3 Comfort אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2018
+          },
+          "km": 96361,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-12T21:03:12.204Z",
+            "updatedAt": "2026-08-12T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix044",
+          "adNumber": "mix044",
+          "price": 44687,
+          "manufacturer": {
+            "id": 0,
+            "text": "הונדה"
+          },
+          "model": {
+            "id": 0,
+            "text": "ג'אז"
+          },
+          "subModel": {
+            "text": "1.3 Comfort אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2018
+          },
+          "km": 94895,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-30T21:03:12.204Z",
+            "updatedAt": "2026-08-30T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix045",
+          "adNumber": "mix045",
+          "price": 40547,
+          "manufacturer": {
+            "id": 0,
+            "text": "הונדה"
+          },
+          "model": {
+            "id": 0,
+            "text": "ג'אז"
+          },
+          "subModel": {
+            "text": "1.3 Comfort אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2018
+          },
+          "km": 151725,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-28T21:03:12.204Z",
+            "updatedAt": "2026-08-28T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix046",
+          "adNumber": "mix046",
+          "price": 52475,
+          "manufacturer": {
+            "id": 0,
+            "text": "הונדה"
+          },
+          "model": {
+            "id": 0,
+            "text": "ג'אז"
+          },
+          "subModel": {
+            "text": "1.3 Comfort אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 112388,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-25T21:03:12.204Z",
+            "updatedAt": "2026-08-25T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix047",
+          "adNumber": "mix047",
+          "price": 52666,
+          "manufacturer": {
+            "id": 0,
+            "text": "הונדה"
+          },
+          "model": {
+            "id": 0,
+            "text": "ג'אז"
+          },
+          "subModel": {
+            "text": "1.3 Comfort אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 76441,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-18T21:03:12.204Z",
+            "updatedAt": "2026-08-18T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix048",
+          "adNumber": "mix048",
+          "price": 51265,
+          "manufacturer": {
+            "id": 0,
+            "text": "הונדה"
+          },
+          "model": {
+            "id": 0,
+            "text": "ג'אז"
+          },
+          "subModel": {
+            "text": "1.3 Comfort אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 105647,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-29T21:03:12.204Z",
+            "updatedAt": "2026-08-29T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix049",
+          "adNumber": "mix049",
+          "price": 54042,
+          "manufacturer": {
+            "id": 0,
+            "text": "הונדה"
+          },
+          "model": {
+            "id": 0,
+            "text": "ג'אז"
+          },
+          "subModel": {
+            "text": "1.3 Comfort אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2020
+          },
+          "km": 74636,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-15T21:03:12.204Z",
+            "updatedAt": "2026-08-15T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix050",
+          "adNumber": "mix050",
+          "price": 56389,
+          "manufacturer": {
+            "id": 0,
+            "text": "הונדה"
+          },
+          "model": {
+            "id": 0,
+            "text": "ג'אז"
+          },
+          "subModel": {
+            "text": "1.3 Comfort אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2020
+          },
+          "km": 118543,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-16T21:03:12.204Z",
+            "updatedAt": "2026-08-16T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix051",
+          "adNumber": "mix051",
+          "price": 52132,
+          "manufacturer": {
+            "id": 0,
+            "text": "הונדה"
+          },
+          "model": {
+            "id": 0,
+            "text": "ג'אז"
+          },
+          "subModel": {
+            "text": "1.3 Comfort אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2020
+          },
+          "km": 113037,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-24T21:03:12.204Z",
+            "updatedAt": "2026-08-24T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix052",
+          "adNumber": "mix052",
+          "price": 59659,
+          "manufacturer": {
+            "id": 0,
+            "text": "הונדה"
+          },
+          "model": {
+            "id": 0,
+            "text": "ג'אז"
+          },
+          "subModel": {
+            "text": "1.3 Comfort אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2021
+          },
+          "km": 91927,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-15T21:03:12.204Z",
+            "updatedAt": "2026-08-15T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix053",
+          "adNumber": "mix053",
+          "price": 64748,
+          "manufacturer": {
+            "id": 0,
+            "text": "הונדה"
+          },
+          "model": {
+            "id": 0,
+            "text": "ג'אז"
+          },
+          "subModel": {
+            "text": "1.3 Comfort אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2021
+          },
+          "km": 64533,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-20T21:03:12.204Z",
+            "updatedAt": "2026-08-20T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix054",
+          "adNumber": "mix054",
+          "price": 60952,
+          "manufacturer": {
+            "id": 0,
+            "text": "הונדה"
+          },
+          "model": {
+            "id": 0,
+            "text": "ג'אז"
+          },
+          "subModel": {
+            "text": "1.3 Comfort אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2021
+          },
+          "km": 88279,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-17T21:03:12.204Z",
+            "updatedAt": "2026-08-17T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "deal-ג'אז",
+          "adNumber": "deal-ג'אז",
+          "price": 42740,
+          "manufacturer": {
+            "id": 0,
+            "text": "הונדה"
+          },
+          "model": {
+            "id": 0,
+            "text": "ג'אז"
+          },
+          "subModel": {
+            "text": "1.3 Comfort אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 58000,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-11T21:03:12.204Z",
+            "updatedAt": "2026-08-11T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix055",
+          "adNumber": "mix055",
+          "price": 28723,
+          "manufacturer": {
+            "id": 0,
+            "text": "סוזוקי"
+          },
+          "model": {
+            "id": 0,
+            "text": "סוויפט"
+          },
+          "subModel": {
+            "text": "1.2 GL אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2016
+          },
+          "km": 162944,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-21T21:03:12.204Z",
+            "updatedAt": "2026-08-21T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix056",
+          "adNumber": "mix056",
+          "price": 31233,
+          "manufacturer": {
+            "id": 0,
+            "text": "סוזוקי"
+          },
+          "model": {
+            "id": 0,
+            "text": "סוויפט"
+          },
+          "subModel": {
+            "text": "1.2 GL אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2016
+          },
+          "km": 171055,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-09-01T21:03:12.204Z",
+            "updatedAt": "2026-09-01T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix057",
+          "adNumber": "mix057",
+          "price": 29091,
+          "manufacturer": {
+            "id": 0,
+            "text": "סוזוקי"
+          },
+          "model": {
+            "id": 0,
+            "text": "סוויפט"
+          },
+          "subModel": {
+            "text": "1.2 GL אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2016
+          },
+          "km": 153998,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-09-04T21:03:12.204Z",
+            "updatedAt": "2026-09-04T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix058",
+          "adNumber": "mix058",
+          "price": 36187,
+          "manufacturer": {
+            "id": 0,
+            "text": "סוזוקי"
+          },
+          "model": {
+            "id": 0,
+            "text": "סוויפט"
+          },
+          "subModel": {
+            "text": "1.2 GL אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2017
+          },
+          "km": 140139,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-20T21:03:12.204Z",
+            "updatedAt": "2026-08-20T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix059",
+          "adNumber": "mix059",
+          "price": 37275,
+          "manufacturer": {
+            "id": 0,
+            "text": "סוזוקי"
+          },
+          "model": {
+            "id": 0,
+            "text": "סוויפט"
+          },
+          "subModel": {
+            "text": "1.2 GL אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2017
+          },
+          "km": 119211,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-13T21:03:12.204Z",
+            "updatedAt": "2026-08-13T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix060",
+          "adNumber": "mix060",
+          "price": 34408,
+          "manufacturer": {
+            "id": 0,
+            "text": "סוזוקי"
+          },
+          "model": {
+            "id": 0,
+            "text": "סוויפט"
+          },
+          "subModel": {
+            "text": "1.2 GL אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2017
+          },
+          "km": 156840,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-15T21:03:12.204Z",
+            "updatedAt": "2026-08-15T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix061",
+          "adNumber": "mix061",
+          "price": 38712,
+          "manufacturer": {
+            "id": 0,
+            "text": "סוזוקי"
+          },
+          "model": {
+            "id": 0,
+            "text": "סוויפט"
+          },
+          "subModel": {
+            "text": "1.2 GL אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2018
+          },
+          "km": 114845,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-13T21:03:12.204Z",
+            "updatedAt": "2026-08-13T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix062",
+          "adNumber": "mix062",
+          "price": 44122,
+          "manufacturer": {
+            "id": 0,
+            "text": "סוזוקי"
+          },
+          "model": {
+            "id": 0,
+            "text": "סוויפט"
+          },
+          "subModel": {
+            "text": "1.2 GL אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2018
+          },
+          "km": 89933,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-11T21:03:12.204Z",
+            "updatedAt": "2026-08-11T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix063",
+          "adNumber": "mix063",
+          "price": 39160,
+          "manufacturer": {
+            "id": 0,
+            "text": "סוזוקי"
+          },
+          "model": {
+            "id": 0,
+            "text": "סוויפט"
+          },
+          "subModel": {
+            "text": "1.2 GL אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2018
+          },
+          "km": 108984,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-09-03T21:03:12.204Z",
+            "updatedAt": "2026-09-03T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix064",
+          "adNumber": "mix064",
+          "price": 49277,
+          "manufacturer": {
+            "id": 0,
+            "text": "סוזוקי"
+          },
+          "model": {
+            "id": 0,
+            "text": "סוויפט"
+          },
+          "subModel": {
+            "text": "1.2 GL אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 92536,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-09-01T21:03:12.204Z",
+            "updatedAt": "2026-09-01T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix065",
+          "adNumber": "mix065",
+          "price": 47817,
+          "manufacturer": {
+            "id": 0,
+            "text": "סוזוקי"
+          },
+          "model": {
+            "id": 0,
+            "text": "סוויפט"
+          },
+          "subModel": {
+            "text": "1.2 GL אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 77516,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-17T21:03:12.204Z",
+            "updatedAt": "2026-08-17T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix066",
+          "adNumber": "mix066",
+          "price": 43929,
+          "manufacturer": {
+            "id": 0,
+            "text": "סוזוקי"
+          },
+          "model": {
+            "id": 0,
+            "text": "סוויפט"
+          },
+          "subModel": {
+            "text": "1.2 GL אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 104552,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-21T21:03:12.204Z",
+            "updatedAt": "2026-08-21T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix067",
+          "adNumber": "mix067",
+          "price": 51766,
+          "manufacturer": {
+            "id": 0,
+            "text": "סוזוקי"
+          },
+          "model": {
+            "id": 0,
+            "text": "סוויפט"
+          },
+          "subModel": {
+            "text": "1.2 GL אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2020
+          },
+          "km": 71450,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-21T21:03:12.204Z",
+            "updatedAt": "2026-08-21T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix068",
+          "adNumber": "mix068",
+          "price": 57637,
+          "manufacturer": {
+            "id": 0,
+            "text": "סוזוקי"
+          },
+          "model": {
+            "id": 0,
+            "text": "סוויפט"
+          },
+          "subModel": {
+            "text": "1.2 GL אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2020
+          },
+          "km": 57412,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-31T21:03:12.204Z",
+            "updatedAt": "2026-08-31T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix069",
+          "adNumber": "mix069",
+          "price": 55241,
+          "manufacturer": {
+            "id": 0,
+            "text": "סוזוקי"
+          },
+          "model": {
+            "id": 0,
+            "text": "סוויפט"
+          },
+          "subModel": {
+            "text": "1.2 GL אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2020
+          },
+          "km": 58288,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-19T21:03:12.204Z",
+            "updatedAt": "2026-08-19T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix070",
+          "adNumber": "mix070",
+          "price": 56675,
+          "manufacturer": {
+            "id": 0,
+            "text": "סוזוקי"
+          },
+          "model": {
+            "id": 0,
+            "text": "סוויפט"
+          },
+          "subModel": {
+            "text": "1.2 GL אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2021
+          },
+          "km": 61689,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-12T21:03:12.204Z",
+            "updatedAt": "2026-08-12T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix071",
+          "adNumber": "mix071",
+          "price": 57998,
+          "manufacturer": {
+            "id": 0,
+            "text": "סוזוקי"
+          },
+          "model": {
+            "id": 0,
+            "text": "סוויפט"
+          },
+          "subModel": {
+            "text": "1.2 GL אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2021
+          },
+          "km": 67082,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-16T21:03:12.204Z",
+            "updatedAt": "2026-08-16T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix072",
+          "adNumber": "mix072",
+          "price": 54361,
+          "manufacturer": {
+            "id": 0,
+            "text": "סוזוקי"
+          },
+          "model": {
+            "id": 0,
+            "text": "סוויפט"
+          },
+          "subModel": {
+            "text": "1.2 GL אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2021
+          },
+          "km": 85370,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-09-04T21:03:12.204Z",
+            "updatedAt": "2026-09-04T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "deal-סוויפט",
+          "adNumber": "deal-סוויפט",
+          "price": 39179,
+          "manufacturer": {
+            "id": 0,
+            "text": "סוזוקי"
+          },
+          "model": {
+            "id": 0,
+            "text": "סוויפט"
+          },
+          "subModel": {
+            "text": "1.2 GL אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 58000,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-11T21:03:12.204Z",
+            "updatedAt": "2026-08-11T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix073",
+          "adNumber": "mix073",
+          "price": 37521,
+          "manufacturer": {
+            "id": 0,
+            "text": "יונדאי"
+          },
+          "model": {
+            "id": 0,
+            "text": "i20"
+          },
+          "subModel": {
+            "text": "1.4 Inspire אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2016
+          },
+          "km": 104907,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-26T21:03:12.204Z",
+            "updatedAt": "2026-08-26T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix074",
+          "adNumber": "mix074",
+          "price": 32473,
+          "manufacturer": {
+            "id": 0,
+            "text": "יונדאי"
+          },
+          "model": {
+            "id": 0,
+            "text": "i20"
+          },
+          "subModel": {
+            "text": "1.4 Inspire אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2016
+          },
+          "km": 135869,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-18T21:03:12.204Z",
+            "updatedAt": "2026-08-18T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix075",
+          "adNumber": "mix075",
+          "price": 37372,
+          "manufacturer": {
+            "id": 0,
+            "text": "יונדאי"
+          },
+          "model": {
+            "id": 0,
+            "text": "i20"
+          },
+          "subModel": {
+            "text": "1.4 Inspire אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2016
+          },
+          "km": 104947,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-28T21:03:12.204Z",
+            "updatedAt": "2026-08-28T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix076",
+          "adNumber": "mix076",
+          "price": 37866,
+          "manufacturer": {
+            "id": 0,
+            "text": "יונדאי"
+          },
+          "model": {
+            "id": 0,
+            "text": "i20"
+          },
+          "subModel": {
+            "text": "1.4 Inspire אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2017
+          },
+          "km": 118016,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-15T21:03:12.204Z",
+            "updatedAt": "2026-08-15T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix077",
+          "adNumber": "mix077",
+          "price": 38872,
+          "manufacturer": {
+            "id": 0,
+            "text": "יונדאי"
+          },
+          "model": {
+            "id": 0,
+            "text": "i20"
+          },
+          "subModel": {
+            "text": "1.4 Inspire אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2017
+          },
+          "km": 95921,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-17T21:03:12.204Z",
+            "updatedAt": "2026-08-17T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix078",
+          "adNumber": "mix078",
+          "price": 34870,
+          "manufacturer": {
+            "id": 0,
+            "text": "יונדאי"
+          },
+          "model": {
+            "id": 0,
+            "text": "i20"
+          },
+          "subModel": {
+            "text": "1.4 Inspire אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2017
+          },
+          "km": 178160,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-28T21:03:12.204Z",
+            "updatedAt": "2026-08-28T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix079",
+          "adNumber": "mix079",
+          "price": 41699,
+          "manufacturer": {
+            "id": 0,
+            "text": "יונדאי"
+          },
+          "model": {
+            "id": 0,
+            "text": "i20"
+          },
+          "subModel": {
+            "text": "1.4 Inspire אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2018
+          },
+          "km": 119819,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-09-03T21:03:12.204Z",
+            "updatedAt": "2026-09-03T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix080",
+          "adNumber": "mix080",
+          "price": 47239,
+          "manufacturer": {
+            "id": 0,
+            "text": "יונדאי"
+          },
+          "model": {
+            "id": 0,
+            "text": "i20"
+          },
+          "subModel": {
+            "text": "1.4 Inspire אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2018
+          },
+          "km": 92230,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-31T21:03:12.204Z",
+            "updatedAt": "2026-08-31T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix081",
+          "adNumber": "mix081",
+          "price": 42705,
+          "manufacturer": {
+            "id": 0,
+            "text": "יונדאי"
+          },
+          "model": {
+            "id": 0,
+            "text": "i20"
+          },
+          "subModel": {
+            "text": "1.4 Inspire אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2018
+          },
+          "km": 154618,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-12T21:03:12.204Z",
+            "updatedAt": "2026-08-12T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix082",
+          "adNumber": "mix082",
+          "price": 50196,
+          "manufacturer": {
+            "id": 0,
+            "text": "יונדאי"
+          },
+          "model": {
+            "id": 0,
+            "text": "i20"
+          },
+          "subModel": {
+            "text": "1.4 Inspire אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 65866,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-23T21:03:12.204Z",
+            "updatedAt": "2026-08-23T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix083",
+          "adNumber": "mix083",
+          "price": 50462,
+          "manufacturer": {
+            "id": 0,
+            "text": "יונדאי"
+          },
+          "model": {
+            "id": 0,
+            "text": "i20"
+          },
+          "subModel": {
+            "text": "1.4 Inspire אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 84098,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-16T21:03:12.204Z",
+            "updatedAt": "2026-08-16T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix084",
+          "adNumber": "mix084",
+          "price": 52148,
+          "manufacturer": {
+            "id": 0,
+            "text": "יונדאי"
+          },
+          "model": {
+            "id": 0,
+            "text": "i20"
+          },
+          "subModel": {
+            "text": "1.4 Inspire אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 99214,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-14T21:03:12.204Z",
+            "updatedAt": "2026-08-14T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix085",
+          "adNumber": "mix085",
+          "price": 51829,
+          "manufacturer": {
+            "id": 0,
+            "text": "יונדאי"
+          },
+          "model": {
+            "id": 0,
+            "text": "i20"
+          },
+          "subModel": {
+            "text": "1.4 Inspire אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2020
+          },
+          "km": 87783,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-14T21:03:12.204Z",
+            "updatedAt": "2026-08-14T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix086",
+          "adNumber": "mix086",
+          "price": 54078,
+          "manufacturer": {
+            "id": 0,
+            "text": "יונדאי"
+          },
+          "model": {
+            "id": 0,
+            "text": "i20"
+          },
+          "subModel": {
+            "text": "1.4 Inspire אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2020
+          },
+          "km": 104056,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-19T21:03:12.204Z",
+            "updatedAt": "2026-08-19T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix087",
+          "adNumber": "mix087",
+          "price": 54727,
+          "manufacturer": {
+            "id": 0,
+            "text": "יונדאי"
+          },
+          "model": {
+            "id": 0,
+            "text": "i20"
+          },
+          "subModel": {
+            "text": "1.4 Inspire אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2020
+          },
+          "km": 69768,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-21T21:03:12.204Z",
+            "updatedAt": "2026-08-21T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix088",
+          "adNumber": "mix088",
+          "price": 58683,
+          "manufacturer": {
+            "id": 0,
+            "text": "יונדאי"
+          },
+          "model": {
+            "id": 0,
+            "text": "i20"
+          },
+          "subModel": {
+            "text": "1.4 Inspire אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2021
+          },
+          "km": 72620,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-18T21:03:12.204Z",
+            "updatedAt": "2026-08-18T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix089",
+          "adNumber": "mix089",
+          "price": 59334,
+          "manufacturer": {
+            "id": 0,
+            "text": "יונדאי"
+          },
+          "model": {
+            "id": 0,
+            "text": "i20"
+          },
+          "subModel": {
+            "text": "1.4 Inspire אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2021
+          },
+          "km": 81855,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-09-04T21:03:12.204Z",
+            "updatedAt": "2026-09-04T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "mix090",
+          "adNumber": "mix090",
+          "price": 63849,
+          "manufacturer": {
+            "id": 0,
+            "text": "יונדאי"
+          },
+          "model": {
+            "id": 0,
+            "text": "i20"
+          },
+          "subModel": {
+            "text": "1.4 Inspire אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2021
+          },
+          "km": 47929,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-23T21:03:12.204Z",
+            "updatedAt": "2026-08-23T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "deal-i20",
+          "adNumber": "deal-i20",
+          "price": 41553,
+          "manufacturer": {
+            "id": 0,
+            "text": "יונדאי"
+          },
+          "model": {
+            "id": 0,
+            "text": "i20"
+          },
+          "subModel": {
+            "text": "1.4 Inspire אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 58000,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-11T21:03:12.204Z",
+            "updatedAt": "2026-08-11T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "off091",
+          "adNumber": "off091",
+          "price": 127017,
+          "manufacturer": {
+            "id": 0,
+            "text": "קיה"
+          },
+          "model": {
+            "id": 0,
+            "text": "ספורטאז׳"
+          },
+          "subModel": {
+            "text": "אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 70000,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-09-04T21:03:12.204Z",
+            "updatedAt": "2026-09-04T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "off092",
+          "adNumber": "off092",
+          "price": 141434,
+          "manufacturer": {
+            "id": 0,
+            "text": "קיה"
+          },
+          "model": {
+            "id": 0,
+            "text": "ספורטאז׳"
+          },
+          "subModel": {
+            "text": "אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 70000,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-09-04T21:03:12.204Z",
+            "updatedAt": "2026-09-04T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "off093",
+          "adNumber": "off093",
+          "price": 120845,
+          "manufacturer": {
+            "id": 0,
+            "text": "קיה"
+          },
+          "model": {
+            "id": 0,
+            "text": "ספורטאז׳"
+          },
+          "subModel": {
+            "text": "אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 70000,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-09-04T21:03:12.204Z",
+            "updatedAt": "2026-09-04T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "off094",
+          "adNumber": "off094",
+          "price": 260068,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "לנד קרוזר"
+          },
+          "subModel": {
+            "text": "אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 70000,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-09-04T21:03:12.204Z",
+            "updatedAt": "2026-09-04T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "off095",
+          "adNumber": "off095",
+          "price": 260372,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "לנד קרוזר"
+          },
+          "subModel": {
+            "text": "אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 70000,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-09-04T21:03:12.204Z",
+            "updatedAt": "2026-09-04T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "off096",
+          "adNumber": "off096",
+          "price": 280772,
+          "manufacturer": {
+            "id": 0,
+            "text": "טויוטה"
+          },
+          "model": {
+            "id": 0,
+            "text": "לנד קרוזר"
+          },
+          "subModel": {
+            "text": "אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 70000,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-09-04T21:03:12.204Z",
+            "updatedAt": "2026-09-04T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "off097",
+          "adNumber": "off097",
+          "price": 145766,
+          "manufacturer": {
+            "id": 0,
+            "text": "יונדאי"
+          },
+          "model": {
+            "id": 0,
+            "text": "טוסון"
+          },
+          "subModel": {
+            "text": "אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 70000,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-09-04T21:03:12.204Z",
+            "updatedAt": "2026-09-04T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "off098",
+          "adNumber": "off098",
+          "price": 138419,
+          "manufacturer": {
+            "id": 0,
+            "text": "יונדאי"
+          },
+          "model": {
+            "id": 0,
+            "text": "טוסון"
+          },
+          "subModel": {
+            "text": "אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 70000,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-09-04T21:03:12.204Z",
+            "updatedAt": "2026-09-04T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "off099",
+          "adNumber": "off099",
+          "price": 155414,
+          "manufacturer": {
+            "id": 0,
+            "text": "יונדאי"
+          },
+          "model": {
+            "id": 0,
+            "text": "טוסון"
+          },
+          "subModel": {
+            "text": "אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 70000,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-09-04T21:03:12.204Z",
+            "updatedAt": "2026-09-04T21:03:12.204Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        }
+      ]
+    }
+  }
+}

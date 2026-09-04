@@ -1,0 +1,71 @@
+{
+  "_comment": "סופרמיני ומשפחתיות קטנות - יאריס / אוריס / הונדה ג'אז ודגמים דומים. החיפושים הם ברמת יצרן בלבד; הצמצום לדגם נעשה מקומית ב-filters.modelPatterns, כדי שקוד דגם שגוי או שהשתנה ביד2 לא ישבור כלום.",
+
+  "searches": [
+    { "name": "טויוטה", "url": "https://www.yad2.co.il/vehicles/cars?manufacturer=19&year=2015-2022&price=25000-90000", "maxPages": 4,
+      "expect": ["יאריס|yaris", "אוריס|auris", "קורולה|corolla"] },
+    { "name": "הונדה", "url": "https://www.yad2.co.il/vehicles/cars?manufacturer=20&year=2015-2022&price=25000-90000", "maxPages": 3,
+      "expect": ["ג׳אז|ג'אז|גאז|jazz|fit", "סיוויק|civic"] },
+    { "name": "מאזדה", "url": "https://www.yad2.co.il/vehicles/cars?manufacturer=27&year=2015-2022&price=25000-90000", "maxPages": 3,
+      "expect": ["מאזדה\\s*2|mazda\\s*2", "מאזדה\\s*3|mazda\\s*3"] },
+    { "name": "סוזוקי", "url": "https://www.yad2.co.il/vehicles/cars?manufacturer=42&year=2015-2022&price=25000-90000", "maxPages": 3,
+      "expect": ["סוויפט|swift", "באלנו|baleno", "איגניס|ignis"] },
+    { "name": "יונדאי", "url": "https://www.yad2.co.il/vehicles/cars?manufacturer=21&year=2015-2022&price=25000-90000", "maxPages": 4,
+      "expect": ["i20|i30|אקסנט|accent"] },
+    { "name": "קיה", "url": "https://www.yad2.co.il/vehicles/cars?manufacturer=48&year=2015-2022&price=25000-90000", "maxPages": 4,
+      "expect": ["ריו|rio", "פיקנטו|picanto", "סיד|ceed"] },
+    { "name": "ניסאן", "url": "https://www.yad2.co.il/vehicles/cars?manufacturer=33&year=2015-2022&price=25000-90000", "maxPages": 3,
+      "expect": ["מיקרה|micra", "נוט|note", "פולסאר|pulsar"] }
+  ],
+
+  "filters": {
+    "priceMin": 25000,
+    "priceMax": 90000,
+    "yearMin": 2015,
+    "yearMax": 2022,
+    "kmMax": 140000,
+    "handMax": 3,
+    "gearbox": ["auto"],
+    "modelPatterns": [
+      "יאריס|yaris",
+      "אוריס|auris",
+      "קורולה|corolla",
+      "ג׳אז|ג'אז|גאז|jazz|honda\\s*fit",
+      "סיוויק|civic",
+      "מאזדה\\s*2|mazda\\s*2",
+      "מאזדה\\s*3|mazda\\s*3",
+      "סוויפט|swift",
+      "באלנו|baleno",
+      "איגניס|ignis",
+      "i20|i30",
+      "ריו|rio",
+      "פיקנטו|picanto",
+      "סיד|ceed",
+      "מיקרה|micra",
+      "נוט|note",
+      "פולסאר|pulsar"
+    ],
+    "excludeOwnerTypes": ["driving-school"],
+    "excludeDealers": false,
+    "regions": [],
+    "excludeKeywords": ["לאחר תאונה", "לפירוק", "לא עובר טסט"],
+    "requireKeywords": []
+  },
+
+  "scoring": {
+    "minBargainScore": 62,
+    "topN": 20,
+    "weights": { "value": 0.6, "condition": 0.25, "risk": 0.15 },
+    "tooGoodToBeTrueRatio": 0.55,
+    "kmPerYearNormal": 15000
+  },
+
+  "fetch": {
+    "mode": "browser",
+    "delayMsBetweenPages": [2000, 5000],
+    "timeoutMs": 45000,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0 Safari/537.36"
+  },
+
+  "output": { "dir": "./out", "html": true, "json": true, "newOnly": false }
+}

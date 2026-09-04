@@ -33,6 +33,8 @@ export CHROMIUM_PATH=/path/to/chrome
 
 ```bash
 node src/cli.js                       # ריצה מלאה לפי config.json
+node src/cli.js --config config.hatchback.example.json   # פריסט: יאריס/אוריס/ג'אז ודומים
+node src/cli.js --config config.demo.json                # דמו offline על נתוני בדיקה
 node src/cli.js --top 20              # יותר תוצאות
 node src/cli.js --new-only            # רק מודעות שלא נראו בריצה קודמת
 node src/cli.js --min-score 70        # רק מציאות חזקות
@@ -51,9 +53,25 @@ npm test                              # בדיקות
 
 ```json
 "searches": [
-  { "name": "מאזדה 3", "url": "https://www.yad2.co.il/vehicles/cars?manufacturer=27&model=10514&year=2016-2020", "maxPages": 3 }
+  { "name": "טויוטה",
+    "url": "https://www.yad2.co.il/vehicles/cars?manufacturer=19&year=2015-2022&price=25000-90000",
+    "maxPages": 4,
+    "expect": ["יאריס|yaris", "אוריס|auris"] }
 ]
 ```
+
+`expect` הוא **בדיקת שפיות**: אם פחות מ-30% מהמודעות שחזרו תואמות את הדגמים שציפית
+להם, הסוכן מתריע שקוד היצרן/דגם ב-URL כנראה שגוי או השתנה — במקום להחזיר בשקט את
+הרכבים הלא נכונים.
+
+### שתי גישות להגדרת דגמים
+
+| גישה | מתי |
+|---|---|
+| URL ברמת **דגם** (`manufacturer=19&model=...`) | פחות עמודים לסרוק, אבל נשבר כשקוד הדגם משתנה |
+| URL ברמת **יצרן** + `filters.modelPatterns` | **מומלץ.** סורק יותר, אבל הצמצום נעשה לפי שם הדגם במודעה עצמה — תמיד נכון |
+
+הפריסט `config.hatchback.example.json` משתמש בגישה השנייה.
 
 ### סינון (`filters`)
 מופעל מקומית על התוצאות, אז הוא תמיד מדויק גם אם פרמטר ב-URL השתנה.
@@ -65,6 +83,7 @@ npm test                              # בדיקות
 | `kmMax` | קילומטראז׳ מקסימלי |
 | `handMax` | מספר ידיים מקסימלי |
 | `gearbox` | `["auto"]` / `["manual"]` |
+| `modelPatterns` | רשימת שמות דגם (טקסט או regex, עברית או אנגלית) — משאיר רק אותם. ריק = בלי סינון דגם |
 | `excludeOwnerTypes` | `rental`, `leasing`, `driving-school`, `company`, `private` |
 | `excludeDealers` | `true` = רק מודעות פרטיות |
 | `regions` | רשימת אזורים (התאמה חלקית לשם) |
@@ -89,6 +108,26 @@ npm test                              # בדיקות
 | `file` | קורא JSON/HTML שמור מהדיסק. לפיתוח, לבדיקות, וכמוצא אחרון (שמור את הדף מהדפדפן שלך). |
 
 `delayMsBetweenPages` הוא השהיה אקראית בין עמודים — אל תקטין אותו.
+
+## פריסט מוכן: סופרמיני וקומפקטיות
+
+`config.hatchback.example.json` — יאריס, אוריס, הונדה ג'אז, סוויפט, באלנו, מאזדה 2/3,
+i20/i30, ריו, פיקנטו, סיד, מיקרה, נוט ודומים. 2015-2022, אוטומט, עד 140,000 ק"מ,
+עד יד 3, ₪25,000-90,000.
+
+```bash
+cp config.hatchback.example.json config.json
+# ערוך את הטווחים בראש הקובץ, ואז:
+node src/cli.js
+```
+
+**קודי היצרן ב-URLים של הפריסט הם נקודת פתיחה ולא מאומתים.** אם קיבלת אזהרת
+"כנראה קוד יצרן/דגם שגוי" — פתח את יד 2, בחר את היצרן מהתפריט, והעתק את ה-URL
+מהדפדפן לתוך `searches[].url`. הסינון לפי `modelPatterns` ימשיך לעבוד בלי שינוי.
+
+בעלות קודמת מסוג השכרה/ליסינג **לא** מסוננת בפריסט — בסגמנט הזה זה חלק גדול
+מהמלאי ולפעמים מציאה אמיתית. הציון מוריד להם נקודות ומסמן דגל, ואתה מחליט.
+אם אתה בכל זאת לא רוצה אותם: `"excludeOwnerTypes": ["rental", "leasing", "driving-school"]`.
 
 ## ריצה מתוזמנת
 
@@ -133,5 +172,5 @@ src/valuation.js   מודל התמחור הקבוצתי
 src/score.js       סינון, דגלים אדומים, ציון
 src/store.js       זיכרון בין ריצות + היסטוריית מחירים
 src/report.js      פלט טרמינל + דוח HTML
-test/              פיקסטורה סינתטית עם "אמת ידועה" + 30 בדיקות
+test/              שתי פיקסטורות סינתטיות עם "אמת ידועה" + 53 בדיקות
 ```

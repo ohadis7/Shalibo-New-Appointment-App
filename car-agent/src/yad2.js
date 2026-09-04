@@ -9,6 +9,7 @@
 import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { resolve, extname } from 'node:path';
 import { extractListings, extractFromHtml } from './parse.js';
+import { matchesModel } from './score.js';
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const jitter = ([min, max]) => min + Math.random() * Math.max(0, max - min);
@@ -154,10 +155,26 @@ function fetchFile(search, cfg, log) {
   return out;
 }
 
+/**
+ * Yad2 manufacturer/model ids in a pasted URL can go stale, and a stale id
+ * silently returns the wrong cars rather than an error. If a search declares
+ * what it expects to find, check that the ads actually say so.
+ */
+export function sanityCheck(search, listings) {
+  const expect = search.expect || [];
+  if (expect.length === 0 || listings.length === 0) return null;
+  const hits = listings.filter((l) => matchesModel(l, expect)).length;
+  const ratio = hits / listings.length;
+  if (ratio >= 0.3) return null;
+  const sample = listings.slice(0, 3).map((l) => l.title).join(' | ');
+  return `החיפוש "${search.name || search.url}" החזיר ${listings.length} מודעות אבל רק ${hits} תואמות את הדגם המצופה - כנראה קוד יצרן/דגם שגוי ב-URL. דוגמאות שהתקבלו: ${sample}`;
+}
+
 /** Run every configured search and return de-duplicated listings. */
 export async function fetchAll(cfg, log = () => {}) {
   const byId = new Map();
   const errors = [];
+  const warnings = [];
 
   for (const search of cfg.searches) {
     log(`\n[${search.name || search.url}]`);
@@ -167,11 +184,16 @@ export async function fetchAll(cfg, log = () => {}) {
       else if (cfg.fetch.mode === 'http') listings = await fetchHttp(search, cfg, log);
       else listings = await fetchBrowser(search, cfg, log);
 
+      const warning = sanityCheck(search, listings);
+      if (warning) {
+        log(`  ! ${warning}`);
+        warnings.push(warning);
+      }
       for (const l of listings) if (!byId.has(l.id)) byId.set(l.id, l);
     } catch (err) {
       log(`  ! ${err.message}`);
       errors.push({ search: search.name || search.url, error: err.message });
     }
   }
-  return { listings: [...byId.values()], errors };
+  return { listings: [...byId.values()], errors, warnings };
 }

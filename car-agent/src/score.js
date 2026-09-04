@@ -29,6 +29,32 @@ const SUSPICIOUS_TEXT = [
   [/יד\s*ראשונה|טיפולים\s*במוסך\s*מורשה|ספר\s*טיפולים/i, 'good', 'היסטוריית טיפולים מסודרת'],
 ];
 
+const reCache = new Map();
+const asRegExp = (pattern) => {
+  if (!reCache.has(pattern)) {
+    let re;
+    try {
+      re = new RegExp(pattern, 'i');
+    } catch {
+      re = new RegExp(pattern.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
+    }
+    reCache.set(pattern, re);
+  }
+  return reCache.get(pattern);
+};
+
+/**
+ * Match a listing against model name patterns (regex or plain text, Hebrew or
+ * English). This is how a search stays correct without trusting Yad2's model
+ * ids: search broadly by manufacturer, narrow by the name the ad actually shows.
+ */
+export function matchesModel(listing, patterns) {
+  if (!patterns || patterns.length === 0) return true;
+  const hay = [listing.manufacturer, listing.model, listing.subModel].filter(Boolean).join(' ');
+  if (!hay) return false;
+  return patterns.some((p) => asRegExp(p).test(hay));
+}
+
 function daysSince(iso) {
   if (!iso) return null;
   const days = (Date.now() - new Date(iso).getTime()) / 86400000;
@@ -60,6 +86,10 @@ export function applyFilters(listings, f) {
     }
     if (f.gearbox.length && l.gearbox && !f.gearbox.includes(l.gearbox)) {
       reject(l, 'תיבת הילוכים לא מתאימה');
+      continue;
+    }
+    if (!matchesModel(l, f.modelPatterns)) {
+      reject(l, 'דגם מחוץ לרשימה');
       continue;
     }
     if (f.excludeOwnerTypes.length && l.ownerType && f.excludeOwnerTypes.includes(l.ownerType)) {

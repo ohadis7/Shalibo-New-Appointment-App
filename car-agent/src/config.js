@@ -14,6 +14,7 @@ const DEFAULTS = {
     kmMax: Infinity,
     handMax: Infinity,
     gearbox: [],
+    modelPatterns: [],
     excludeOwnerTypes: [],
     excludeDealers: false,
     regions: [],

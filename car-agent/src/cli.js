@@ -65,7 +65,7 @@ async function main() {
   log(`config: ${cfg.__path}`);
   log(`mode:   ${cfg.fetch.mode}`);
 
-  const { listings, errors } = await fetchAll(cfg, log);
+  const { listings, errors, warnings } = await fetchAll(cfg, log);
   if (listings.length === 0) {
     console.error('\nלא נאספו מודעות.');
     for (const e of errors) console.error(`  ${e.search}: ${e.error}`);
@@ -96,6 +96,10 @@ async function main() {
   printConsole(shown, cfg, stats);
   const files = writeReports(shown, cfg, stats);
   for (const f of files) log(`נכתב: ${f}`);
+  if (warnings.length) {
+    console.error('\nאזהרות:');
+    for (const w of warnings) console.error(`  ${w}`);
+  }
   if (errors.length) {
     console.error('\nחיפושים שנכשלו:');
     for (const e of errors) console.error(`  ${e.search}: ${e.error}`);
