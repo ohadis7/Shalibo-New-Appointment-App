@@ -1,0 +1,55 @@
+{
+  "searches": [
+    {
+      "name": "Mazda 3 2016-2020",
+      "url": "https://www.yad2.co.il/vehicles/cars?manufacturer=27&model=10514&year=2016-2020&price=40000-75000",
+      "maxPages": 3
+    },
+    {
+      "name": "Toyota Corolla 2017-2021",
+      "url": "https://www.yad2.co.il/vehicles/cars?manufacturer=19&model=10535&year=2017-2021&price=45000-90000",
+      "maxPages": 3
+    }
+  ],
+
+  "filters": {
+    "priceMin": 30000,
+    "priceMax": 90000,
+    "yearMin": 2015,
+    "yearMax": 2022,
+    "kmMax": 160000,
+    "handMax": 3,
+    "gearbox": ["auto"],
+    "excludeOwnerTypes": ["rental", "leasing", "driving-school"],
+    "excludeDealers": false,
+    "regions": [],
+    "excludeKeywords": ["לאחר תאונה", "לפירוק", "לא עובר טסט"],
+    "requireKeywords": []
+  },
+
+  "scoring": {
+    "minBargainScore": 60,
+    "topN": 15,
+    "weights": {
+      "value": 0.6,
+      "condition": 0.25,
+      "risk": 0.15
+    },
+    "tooGoodToBeTrueRatio": 0.55,
+    "kmPerYearNormal": 15000
+  },
+
+  "fetch": {
+    "mode": "browser",
+    "delayMsBetweenPages": [1500, 4000],
+    "timeoutMs": 45000,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0 Safari/537.36"
+  },
+
+  "output": {
+    "dir": "./out",
+    "html": true,
+    "json": true,
+    "newOnly": false
+  }
+}

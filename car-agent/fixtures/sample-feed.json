@@ -1,0 +1,2364 @@
+{
+  "data": {
+    "pagination": {
+      "current_page": 1,
+      "last_page": 4
+    },
+    "feed": {
+      "feed_items": [
+        {
+          "token": "base001",
+          "adNumber": "base001",
+          "price": 21721,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2016
+          },
+          "km": 119244,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-30T20:51:48.470Z",
+            "updatedAt": "2026-08-30T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "base002",
+          "adNumber": "base002",
+          "price": 23948,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2016
+          },
+          "km": 97040,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-31T20:51:48.470Z",
+            "updatedAt": "2026-08-31T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": true
+        },
+        {
+          "token": "base003",
+          "adNumber": "base003",
+          "price": 21326,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2016
+          },
+          "km": 206161,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-27T20:51:48.470Z",
+            "updatedAt": "2026-08-27T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "base004",
+          "adNumber": "base004",
+          "price": 22600,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2016
+          },
+          "km": 190394,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-31T20:51:48.470Z",
+            "updatedAt": "2026-08-31T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "base005",
+          "adNumber": "base005",
+          "price": 20819,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2016
+          },
+          "km": 174589,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-17T20:51:48.470Z",
+            "updatedAt": "2026-08-17T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": true
+        },
+        {
+          "token": "base006",
+          "adNumber": "base006",
+          "price": 22254,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2016
+          },
+          "km": 185321,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-30T20:51:48.470Z",
+            "updatedAt": "2026-08-30T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "base007",
+          "adNumber": "base007",
+          "price": 23142,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2016
+          },
+          "km": 168711,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-21T20:51:48.470Z",
+            "updatedAt": "2026-08-21T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": true
+        },
+        {
+          "token": "base008",
+          "adNumber": "base008",
+          "price": 23682,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2017
+          },
+          "km": 188354,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-26T20:51:48.470Z",
+            "updatedAt": "2026-08-26T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": true
+        },
+        {
+          "token": "base009",
+          "adNumber": "base009",
+          "price": 26347,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2017
+          },
+          "km": 161434,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-17T20:51:48.470Z",
+            "updatedAt": "2026-08-17T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "base010",
+          "adNumber": "base010",
+          "price": 22923,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2017
+          },
+          "km": 175001,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-26T20:51:48.470Z",
+            "updatedAt": "2026-08-26T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": true
+        },
+        {
+          "token": "base011",
+          "adNumber": "base011",
+          "price": 25797,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2017
+          },
+          "km": 164389,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-09-03T20:51:48.470Z",
+            "updatedAt": "2026-09-03T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "base012",
+          "adNumber": "base012",
+          "price": 28388,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2017
+          },
+          "km": 90396,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-18T20:51:48.470Z",
+            "updatedAt": "2026-08-18T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "base013",
+          "adNumber": "base013",
+          "price": 25790,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2017
+          },
+          "km": 117714,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-26T20:51:48.470Z",
+            "updatedAt": "2026-08-26T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": true
+        },
+        {
+          "token": "base014",
+          "adNumber": "base014",
+          "price": 27085,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2017
+          },
+          "km": 147302,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-25T20:51:48.470Z",
+            "updatedAt": "2026-08-25T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": true
+        },
+        {
+          "token": "base015",
+          "adNumber": "base015",
+          "price": 33130,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2018
+          },
+          "km": 88149,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-09-01T20:51:48.470Z",
+            "updatedAt": "2026-09-01T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "base016",
+          "adNumber": "base016",
+          "price": 31212,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2018
+          },
+          "km": 76302,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-28T20:51:48.470Z",
+            "updatedAt": "2026-08-28T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": true
+        },
+        {
+          "token": "base017",
+          "adNumber": "base017",
+          "price": 29474,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2018
+          },
+          "km": 152648,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-26T20:51:48.470Z",
+            "updatedAt": "2026-08-26T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "base018",
+          "adNumber": "base018",
+          "price": 28353,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2018
+          },
+          "km": 154848,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-31T20:51:48.470Z",
+            "updatedAt": "2026-08-31T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "base019",
+          "adNumber": "base019",
+          "price": 32741,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2018
+          },
+          "km": 85054,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-23T20:51:48.470Z",
+            "updatedAt": "2026-08-23T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": true
+        },
+        {
+          "token": "base020",
+          "adNumber": "base020",
+          "price": 28898,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2018
+          },
+          "km": 133507,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-22T20:51:48.470Z",
+            "updatedAt": "2026-08-22T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "base021",
+          "adNumber": "base021",
+          "price": 28119,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2018
+          },
+          "km": 123553,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-24T20:51:48.470Z",
+            "updatedAt": "2026-08-24T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "base022",
+          "adNumber": "base022",
+          "price": 35639,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 108067,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-20T20:51:48.470Z",
+            "updatedAt": "2026-08-20T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "base023",
+          "adNumber": "base023",
+          "price": 35209,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 109752,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-09-04T20:51:48.470Z",
+            "updatedAt": "2026-09-04T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "base024",
+          "adNumber": "base024",
+          "price": 34524,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 138294,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-30T20:51:48.470Z",
+            "updatedAt": "2026-08-30T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "base025",
+          "adNumber": "base025",
+          "price": 36247,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 102920,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-23T20:51:48.470Z",
+            "updatedAt": "2026-08-23T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": true
+        },
+        {
+          "token": "base026",
+          "adNumber": "base026",
+          "price": 32776,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 94003,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-16T20:51:48.470Z",
+            "updatedAt": "2026-08-16T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "base027",
+          "adNumber": "base027",
+          "price": 35099,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 92060,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-21T20:51:48.470Z",
+            "updatedAt": "2026-08-21T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "base028",
+          "adNumber": "base028",
+          "price": 33766,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 107639,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-18T20:51:48.470Z",
+            "updatedAt": "2026-08-18T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": true
+        },
+        {
+          "token": "base029",
+          "adNumber": "base029",
+          "price": 42008,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2020
+          },
+          "km": 74059,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-29T20:51:48.470Z",
+            "updatedAt": "2026-08-29T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": true
+        },
+        {
+          "token": "base030",
+          "adNumber": "base030",
+          "price": 39373,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2020
+          },
+          "km": 112734,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-18T20:51:48.470Z",
+            "updatedAt": "2026-08-18T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": true
+        },
+        {
+          "token": "base031",
+          "adNumber": "base031",
+          "price": 35218,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2020
+          },
+          "km": 115737,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-27T20:51:48.470Z",
+            "updatedAt": "2026-08-27T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": true
+        },
+        {
+          "token": "base032",
+          "adNumber": "base032",
+          "price": 43691,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2020
+          },
+          "km": 57249,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-23T20:51:48.470Z",
+            "updatedAt": "2026-08-23T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "base033",
+          "adNumber": "base033",
+          "price": 42037,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2020
+          },
+          "km": 57886,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-16T20:51:48.470Z",
+            "updatedAt": "2026-08-16T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": true
+        },
+        {
+          "token": "base034",
+          "adNumber": "base034",
+          "price": 40101,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2020
+          },
+          "km": 105803,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-18T20:51:48.470Z",
+            "updatedAt": "2026-08-18T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "base035",
+          "adNumber": "base035",
+          "price": 35998,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2020
+          },
+          "km": 110745,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-17T20:51:48.470Z",
+            "updatedAt": "2026-08-17T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "base036",
+          "adNumber": "base036",
+          "price": 45063,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2021
+          },
+          "km": 89078,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-20T20:51:48.470Z",
+            "updatedAt": "2026-08-20T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "base037",
+          "adNumber": "base037",
+          "price": 44634,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2021
+          },
+          "km": 96815,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-28T20:51:48.470Z",
+            "updatedAt": "2026-08-28T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": true
+        },
+        {
+          "token": "base038",
+          "adNumber": "base038",
+          "price": 42337,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2021
+          },
+          "km": 103343,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-09-02T20:51:48.470Z",
+            "updatedAt": "2026-09-02T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "base039",
+          "adNumber": "base039",
+          "price": 48280,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2021
+          },
+          "km": 52915,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-28T20:51:48.470Z",
+            "updatedAt": "2026-08-28T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": true
+        },
+        {
+          "token": "base040",
+          "adNumber": "base040",
+          "price": 47081,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2021
+          },
+          "km": 67115,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-28T20:51:48.470Z",
+            "updatedAt": "2026-08-28T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "base041",
+          "adNumber": "base041",
+          "price": 47562,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2021
+          },
+          "km": 81552,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-26T20:51:48.470Z",
+            "updatedAt": "2026-08-26T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "base042",
+          "adNumber": "base042",
+          "price": 43300,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2021
+          },
+          "km": 57937,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-18T20:51:48.470Z",
+            "updatedAt": "2026-08-18T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "bargain01",
+          "adNumber": "bargain01",
+          "price": 28635,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 62000,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-05T20:51:48.470Z",
+            "updatedAt": "2026-08-05T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "יד ראשונה, ספר טיפולים מלא, מחיר גמיש."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "bargain02",
+          "adNumber": "bargain02",
+          "price": 26096,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2018
+          },
+          "km": 71000,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-08-09T20:51:48.470Z",
+            "updatedAt": "2026-08-09T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "bargain03",
+          "adNumber": "bargain03",
+          "price": 35519,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2020
+          },
+          "km": 45000,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-09-01T20:51:48.470Z",
+            "updatedAt": "2026-09-01T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "wreck01",
+          "adNumber": "wreck01",
+          "price": 16361,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2019
+          },
+          "km": 60000,
+          "hand": {
+            "id": 3,
+            "text": "יד 3"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-09-04T20:51:48.470Z",
+            "updatedAt": "2026-09-04T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "הרכב לאחר תאונה, עבר תיקון במוסך."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "overpriced01",
+          "adNumber": "overpriced01",
+          "price": 35228,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2017
+          },
+          "km": 90000,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-09-04T20:51:48.470Z",
+            "updatedAt": "2026-09-04T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "leasing01",
+          "adNumber": "leasing01",
+          "price": 32340,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2020
+          },
+          "km": 130000,
+          "hand": {
+            "id": 1,
+            "text": "יד 1"
+          },
+          "gearBox": {
+            "text": "אוטומטית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "ליסינג"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-09-04T20:51:48.470Z",
+            "updatedAt": "2026-09-04T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        },
+        {
+          "token": "manual01",
+          "adNumber": "manual01",
+          "price": 28903,
+          "manufacturer": {
+            "id": 27,
+            "text": "מאזדה"
+          },
+          "model": {
+            "id": 10514,
+            "text": "3"
+          },
+          "subModel": {
+            "text": "1.5 Active אוט׳"
+          },
+          "vehicleDates": {
+            "yearOfProduction": 2018
+          },
+          "km": 65000,
+          "hand": {
+            "id": 2,
+            "text": "יד 2"
+          },
+          "gearBox": {
+            "text": "ידנית"
+          },
+          "engineVolume": 1500,
+          "previousOwner": {
+            "text": "פרטית"
+          },
+          "address": {
+            "city": {
+              "text": "תל אביב"
+            },
+            "area": {
+              "text": "מרכז"
+            }
+          },
+          "dates": {
+            "createdAt": "2026-09-04T20:51:48.470Z",
+            "updatedAt": "2026-09-04T20:51:48.470Z"
+          },
+          "metaData": {
+            "coverImage": "https://img.yad2.co.il/x.jpg",
+            "description": "רכב שמור, טיפולים במוסך מורשה."
+          },
+          "isDealer": false
+        }
+      ]
+    }
+  }
+}
