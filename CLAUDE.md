@@ -18,6 +18,7 @@ templates at image-build time via `sed` / `python3` in the `Dockerfile`.
 | `login-inject.js` | Injects SW logo into admin login page |
 | `landing.html` | Standalone public booking hub at `/landing.html` |
 | `build-and-push.ps1` | HUMAN ONLY - builds, pushes to ECR, redeploys ECS |
+| `scripts/inject-redirect.py` | Injects the hub redirect into the booking layout at build time |
 | `scripts/verify-injections.sh` | Asserts every Dockerfile injection actually landed |
 | `tests/` | Playwright visual + smoke tests for `landing.html` |
 
@@ -27,6 +28,11 @@ The single most dangerous property of this repo: **every `sed` injection ends in
 `|| true`**. If EA upstream renames a template or changes its markup, the `sed`
 silently does nothing, the image builds green, and the site deploys unstyled.
 Nobody finds out until a customer complains.
+
+The landing-page redirect is the exception - it lives in
+`scripts/inject-redirect.py` and fails the build loudly, because a silent no-op
+there sends every visitor to a bare booking wizard instead of the hub. New
+injections should follow that pattern rather than the `|| true` one.
 
 That is why `scripts/verify-injections.sh` exists and why CI runs it on every PR.
 Rules:
@@ -118,8 +124,6 @@ cd tests && npm ci && npx playwright test
 
 ## Known gaps - good candidates for agent work
 
-- `.gitignore` ignores `package-lock.json`, so `npm ci` in CI cannot be fully
-  reproducible for `tests/`. Worth fixing.
 - The admin login injection targets `application/views/user/login.php`. That path
   has never been verified against the current upstream image - the Dockerfile
   still carries a leftover `find` debug step for it.
@@ -127,4 +131,8 @@ cd tests && npm ci && npx playwright test
   service container). Current CI verifies the build and the standalone landing
   page only.
 - `landing.html` has no navigation at all, which conflicts with the standing
-  "always show the burger menu" rule.
+  "always show the burger menu" rule. The Playwright test for it is marked as a
+  known gap (`test.fail()`); when the burger menu is added, remove that marker
+  so the test becomes a real guard.
+- The Dockerfile still ends with a leftover `find ... -name "login.php"` debug
+  step. Harmless, but it adds a layer and should go.

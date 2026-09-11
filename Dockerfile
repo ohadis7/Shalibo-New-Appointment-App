@@ -5,16 +5,14 @@ COPY custom.css        /var/www/html/assets/css/custom.css
 COPY booking-inject.js /var/www/html/assets/js/booking-inject.js
 
 # ── Redirect root booking page to landing.html when no ?service/?provider ──
-# Inject INLINE script early in <head> — runs before any rendering.
-# If neither "service" nor "provider" is in the URL query-string, the visitor
-# is sent to the hub landing page (/landing.html) immediately.
-RUN python3 -c "
-f = '/var/www/html/application/views/layouts/booking_layout.php'
-c = open(f).read()
-script = '<script>(function(){var p=new URLSearchParams(location.search);if(!p.get(\"service\")&&!p.get(\"provider\")){location.replace(\"/landing.html\");}})();</script>'
-c = c.replace('<head>', '<head>' + script, 1)
-open(f,'w').write(c)
-" || true
+# Runs inline in <head>, before any rendering. If neither "service" nor
+# "provider" is in the query-string the visitor goes straight to the hub.
+#
+# This is a script file rather than an inline `RUN python3 -c "..."`: Docker
+# reads every line of a RUN as a new instruction unless it is continued, so the
+# previous multi-line form failed to parse and broke `docker build` entirely.
+COPY scripts/inject-redirect.py /tmp/inject-redirect.py
+RUN python3 /tmp/inject-redirect.py && rm /tmp/inject-redirect.py
 
 # Inject CSS into booking page <head>
 RUN sed -i 's|</head>|<link rel="stylesheet" href="/assets/css/custom.css">\n</head>|g' \
