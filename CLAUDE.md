@@ -7,7 +7,7 @@ reads this file first. Keep it accurate; a stale CLAUDE.md is worse than none.
 
 A CSS/JS overlay baked into the official Easy!Appointments Docker image.
 We do NOT fork or modify EA source. We inject our own assets into EA's PHP
-templates at image-build time via `sed` / `python3` in the `Dockerfile`.
+templates at image-build time via `sed` and POSIX sh in the `Dockerfile`.
 
 | File | Purpose |
 |------|---------|
