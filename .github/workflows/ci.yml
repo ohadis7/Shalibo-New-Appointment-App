@@ -6,7 +6,9 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    # Agent branches run CI on push so a session can prove its work is green
+    # before it opens a pull request for human review.
+    branches: [main, 'agent/**', 'claude/**']
   pull_request:
   workflow_dispatch:
 
