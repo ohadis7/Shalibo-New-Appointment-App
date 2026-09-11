@@ -72,6 +72,18 @@ if [ -f "$BOOKING" ] && grep -q '</body>' "$BOOKING" && grep -q '</head>' "$BOOK
 else
   report FAIL "booking: template intact" "head/body tags missing - sed may have mangled it"
 fi
+
+# --- diagnostics -------------------------------------------------------
+# When an injection does not land the next question is always the same:
+# which template actually owns the </head> and </body> we are trying to
+# patch? CodeIgniter views are partials - the tags usually live in a layout,
+# not in the page view. Answer it here so nobody has to rebuild the image by
+# hand to find out.
+for f in $(find /var/www/html/application/views -name '*.php' 2>/dev/null); do
+  if grep -q '</head>' "$f" 2>/dev/null; then
+    printf 'DIAG\thas </head>\t%s\n' "$f"
+  fi
+done
 INNER_EOF
 )
 
@@ -88,10 +100,13 @@ fi
 
 FAILED=0
 PASSED=0
+DIAGS=""
 while IFS=$'\t' read -r status name detail; do
   case "$status" in
     PASS) printf '  \033[32mPASS\033[0m  %-28s %s\n' "$name" "$detail"; PASSED=$((PASSED + 1)) ;;
     FAIL) printf '  \033[31mFAIL\033[0m  %-28s %s\n' "$name" "$detail"; FAILED=$((FAILED + 1)) ;;
+    DIAG) DIAGS="${DIAGS}  ${name}  ${detail}
+" ;;
     *)    [ -n "$status" ] && printf '        %s %s %s\n' "$status" "$name" "$detail" ;;
   esac
 done <<< "$OUTPUT"
@@ -100,6 +115,11 @@ echo
 echo "$PASSED passed, $FAILED failed"
 
 if [ "$FAILED" -gt 0 ]; then
+  if [ -n "$DIAGS" ]; then
+    echo
+    echo "Templates in the image that contain </head>:"
+    printf '%s' "$DIAGS"
+  fi
   cat <<'HINT'
 
 One or more injections did not land. This means the image would deploy with
