@@ -11,8 +11,11 @@ COPY booking-inject.js /var/www/html/assets/js/booking-inject.js
 # This is a script file rather than an inline `RUN python3 -c "..."`: Docker
 # reads every line of a RUN as a new instruction unless it is continued, so the
 # previous multi-line form failed to parse and broke `docker build` entirely.
-COPY scripts/inject-redirect.py /tmp/inject-redirect.py
-RUN python3 /tmp/inject-redirect.py && rm /tmp/inject-redirect.py
+# It is POSIX sh because this image has no python3 at all - the old inline
+# python injection could never have run, even once.
+COPY scripts/inject-redirect.sh   /tmp/inject-redirect.sh
+COPY scripts/booking-redirect.html /tmp/booking-redirect.html
+RUN sh /tmp/inject-redirect.sh && rm -f /tmp/inject-redirect.sh /tmp/booking-redirect.html
 
 # Inject CSS into booking page <head>
 RUN sed -i 's|</head>|<link rel="stylesheet" href="/assets/css/custom.css">\n</head>|g' \

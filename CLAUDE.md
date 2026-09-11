@@ -18,7 +18,8 @@ templates at image-build time via `sed` / `python3` in the `Dockerfile`.
 | `login-inject.js` | Injects SW logo into admin login page |
 | `landing.html` | Standalone public booking hub at `/landing.html` |
 | `build-and-push.ps1` | HUMAN ONLY - builds, pushes to ECR, redeploys ECS |
-| `scripts/inject-redirect.py` | Injects the hub redirect into the booking layout at build time |
+| `scripts/inject-redirect.sh` | Injects the hub redirect into the booking layout at build time |
+| `scripts/booking-redirect.html` | The redirect snippet that script injects |
 | `scripts/verify-injections.sh` | Asserts every Dockerfile injection actually landed |
 | `tests/` | Playwright visual + smoke tests for `landing.html` |
 
@@ -30,7 +31,7 @@ silently does nothing, the image builds green, and the site deploys unstyled.
 Nobody finds out until a customer complains.
 
 The landing-page redirect is the exception - it lives in
-`scripts/inject-redirect.py` and fails the build loudly, because a silent no-op
+`scripts/inject-redirect.sh` and fails the build loudly, because a silent no-op
 there sends every visitor to a bare booking wizard instead of the hub. New
 injections should follow that pattern rather than the `|| true` one.
 
@@ -41,6 +42,10 @@ Rules:
   `scripts/verify-injections.sh`.
 - Never remove or weaken an assertion to make CI pass. A failing assertion means
   the injection broke - fix the injection, not the test.
+- **The image has no `python3`.** Write build-time injections in POSIX sh and
+  sed. Do not add a dependency on an interpreter without first proving it
+  exists inside the image - an inline python injection sat in this Dockerfile
+  and could never have run.
 - `alextselegidis/easyappointments:latest` is an unpinned upstream tag. It can
   change under us. If verification suddenly fails with no change on our side,
   that is upstream drift - report it, do not paper over it.
