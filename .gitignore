@@ -1,4 +1,12 @@
 node_modules/
 *.png
 *.jpg
+
+# Lockfiles are ignored by default in this repo, but the test harness needs a
+# committed one so `npm ci` in CI is reproducible.
 package-lock.json
+!tests/package-lock.json
+
+# Playwright output
+tests/test-results/
+tests/playwright-report/
