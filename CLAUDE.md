@@ -129,9 +129,6 @@ cd tests && npm ci && npx playwright test
 
 ## Known gaps - good candidates for agent work
 
-- The admin login injection targets `application/views/user/login.php`. That path
-  has never been verified against the current upstream image - the Dockerfile
-  still carries a leftover `find` debug step for it.
 - There is no end-to-end test against a running EA instance (needs a MySQL
   service container). Current CI verifies the build and the standalone landing
   page only.
@@ -139,5 +136,5 @@ cd tests && npm ci && npx playwright test
   "always show the burger menu" rule. The Playwright test for it is marked as a
   known gap (`test.fail()`); when the burger menu is added, remove that marker
   so the test becomes a real guard.
-- The Dockerfile still ends with a leftover `find ... -name "login.php"` debug
-  step. Harmless, but it adds a layer and should go.
+- No end-to-end check that the admin login redesign actually renders. The
+  injection now lands, but nothing loads the page and looks at it.

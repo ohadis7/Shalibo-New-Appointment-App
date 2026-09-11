@@ -28,7 +28,7 @@ fi
 #   PASS|FAIL <tab> <check name> <tab> <detail>
 INNER=$(cat <<'INNER_EOF'
 BOOKING=/var/www/html/application/views/layouts/booking_layout.php
-LOGIN=/var/www/html/application/views/user/login.php
+LOGIN=/var/www/html/application/views/pages/login.php
 
 report() { printf '%s\t%s\t%s\n' "$1" "$2" "$3"; }
 
