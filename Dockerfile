@@ -27,19 +27,22 @@ RUN sed -i 's|</body>|<script src="/assets/js/booking-inject.js"></script>\n</bo
     /var/www/html/application/views/layouts/booking_layout.php || true
 
 # ── 2. Admin login page — beautiful redesign ────────────────────
-# The template is views/pages/login.php. It is NOT views/user/login.php -
-# that path does not exist in this image, and these two injections silently
-# did nothing for as long as they pointed at it.
+# These go into views/layouts/account_layout.php, not views/pages/login.php.
+# login.php is a CodeIgniter partial with no <head> or <body> of its own - the
+# tags live in the layout that wraps it. The original path, views/user/login.php,
+# does not exist in this image at all. Both earlier targets meant these two
+# injections silently did nothing, because the seds end in `|| true`.
+# The layout also wraps the other account pages, so the branding applies there.
 COPY login-override.css /var/www/html/assets/css/login-override.css
 COPY login-inject.js    /var/www/html/assets/js/login-inject.js
 
 # Inject CSS into the admin login page head
 RUN sed -i 's|</head>|<link rel="stylesheet" href="/assets/css/login-override.css">\n</head>|g' \
-    /var/www/html/application/views/pages/login.php || true
+    /var/www/html/application/views/layouts/account_layout.php || true
 
 # Inject JS at bottom of admin login page body
 RUN sed -i 's|</body>|<script src="/assets/js/login-inject.js"></script>\n</body>|g' \
-    /var/www/html/application/views/pages/login.php || true
+    /var/www/html/application/views/layouts/account_layout.php || true
 
 # ── 3. Booking hub landing page ─────────────────────────────────
 # Accessible at: https://booking.shalibowellness.com/landing.html

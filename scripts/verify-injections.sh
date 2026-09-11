@@ -28,7 +28,7 @@ fi
 #   PASS|FAIL <tab> <check name> <tab> <detail>
 INNER=$(cat <<'INNER_EOF'
 BOOKING=/var/www/html/application/views/layouts/booking_layout.php
-LOGIN=/var/www/html/application/views/pages/login.php
+LOGIN=/var/www/html/application/views/layouts/account_layout.php
 
 report() { printf '%s\t%s\t%s\n' "$1" "$2" "$3"; }
 
@@ -62,7 +62,7 @@ contains "booking: enhancer script"  "$BOOKING" 'assets/js/booking-inject.js'
 contains "booking: landing redirect" "$BOOKING" 'location.replace("/landing.html")'
 
 # --- admin login page injections ----------------------------------------
-file_exists "login: template"        "$LOGIN"
+file_exists "login: account layout"  "$LOGIN"
 contains "login: override css link"  "$LOGIN" 'assets/css/login-override.css'
 contains "login: logo script"        "$LOGIN" 'assets/js/login-inject.js'
 
