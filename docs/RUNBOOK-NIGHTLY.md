@@ -97,6 +97,22 @@ docker build -t sw-ea:verify .
 cd tests && npm ci && npx playwright test
 ```
 
+**If there is no Docker daemon.** A cloud session may have the `docker` CLI
+but no daemon behind it - `docker build` then fails with
+`Cannot connect to the Docker daemon`. That is an environment limitation, not
+something to work around. When it happens:
+
+- Run everything you can: the Playwright suite does not need Docker.
+- Push the branch and let CI build the image and run
+  `verify-injections.sh` for you. Read the CI result and treat it exactly as
+  you would a local run - if the image job is red, the work is not done.
+- Say plainly in the pull request which checks you ran yourself and which you
+  delegated to CI.
+
+Never write "verified" for something you did not observe. An unverifiable
+claim in a pull request is worse than an admitted gap, because the human
+reviewing it at 8am has no way to tell the difference.
+
 Then run the `qa` subagent against the change. It reports; it does not fix. Take
 its blockers back to `dev` and repeat until they are gone.
 
