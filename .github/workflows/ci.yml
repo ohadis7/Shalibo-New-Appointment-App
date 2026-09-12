@@ -1,0 +1,148 @@
+name: CI
+
+# The verification floor for the agent network. Nothing merges without this.
+# Every scheduled agent session is required to get this green before it opens
+# a pull request for review.
+
+on:
+  push:
+    # Agent branches run CI on push so a session can prove its work is green
+    # before it opens a pull request for human review.
+    branches: [main, 'agent/**', 'claude/**']
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  image:
+    name: Build image and verify injections
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build the custom Easy!Appointments image
+        run: docker build -t sw-ea:verify .
+
+      - name: Verify every Dockerfile injection landed
+        # This is the check that matters. Every `sed` in the Dockerfile ends in
+        # `|| true`, so upstream drift produces a green build and an unstyled
+        # production site. This step is the only thing that catches it.
+        run: ./scripts/verify-injections.sh sw-ea:verify
+
+  static:
+    name: Lint static assets
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Check JS syntax
+        run: |
+          for f in booking-inject.js login-inject.js; do
+            echo "checking $f"
+            node --check "$f"
+          done
+
+      - name: Check CSS for unbalanced braces
+        # Deliberately crude. A truncated or half-pasted stylesheet is the most
+        # common way this repo breaks, and it is cheap to catch.
+        run: |
+          for f in custom.css login-override.css; do
+            open=$(tr -cd '{' < "$f" | wc -c)
+            close=$(tr -cd '}' < "$f" | wc -c)
+            echo "$f: $open open, $close close"
+            if [ "$open" -ne "$close" ]; then
+              echo "::error file=$f::unbalanced braces - $open '{' vs $close '}'"
+              exit 1
+            fi
+          done
+
+      - name: Check HTML is well-formed
+        run: |
+          python3 - <<'PY'
+          import html.parser, sys
+
+          VOID = {'area','base','br','col','embed','hr','img','input','link',
+                  'meta','param','source','track','wbr'}
+
+          class Check(html.parser.HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.stack = []
+                  self.errors = []
+              def handle_starttag(self, tag, attrs):
+                  if tag not in VOID:
+                      self.stack.append((tag, self.getpos()[0]))
+              def handle_endtag(self, tag):
+                  if tag in VOID:
+                      return
+                  if not self.stack:
+                      self.errors.append(f'line {self.getpos()[0]}: stray </{tag}>')
+                  elif self.stack[-1][0] != tag:
+                      open_tag, line = self.stack[-1]
+                      self.errors.append(
+                          f'line {self.getpos()[0]}: </{tag}> closes <{open_tag}> opened on line {line}')
+                      self.stack.pop()
+                  else:
+                      self.stack.pop()
+
+          p = Check()
+          p.feed(open('landing.html', encoding='utf-8').read())
+          # <svg> content and a few tolerated patterns can leave residue; only
+          # report genuine mismatches.
+          for e in p.errors:
+              print(f'::error file=landing.html::{e}')
+          if p.errors:
+              sys.exit(1)
+          print('landing.html: tags balanced')
+          PY
+
+  landing:
+    name: Booking hub smoke tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install test dependencies
+        working-directory: tests
+        run: npm ci
+
+      - name: Install Playwright browser
+        working-directory: tests
+        run: npx playwright install --with-deps chromium
+
+      - name: Run smoke and visual tests
+        working-directory: tests
+        run: npx playwright test
+
+      - name: Upload screenshots and report
+        # Screenshots are the point: a human reviewing an overnight PR should be
+        # able to look at a picture instead of reading a CSS diff.
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: landing-screenshots
+          path: |
+            tests/test-results/
+            tests/playwright-report/
+          retention-days: 14
+          if-no-files-found: warn

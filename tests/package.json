@@ -1,0 +1,13 @@
+{
+  "name": "shalibo-ea-tests",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Visual and smoke tests for the Shalibo Wellness booking hub",
+  "scripts": {
+    "test": "playwright test",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1"
+  }
+}
