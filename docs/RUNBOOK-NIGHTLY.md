@@ -19,8 +19,32 @@ Check these first. If any holds, **stop and report. Do not improvise.**
 | `scripts/verify-injections.sh` is missing | There is no verification floor. Work done now cannot be checked. |
 | CI is red on the default branch | The baseline is broken. Anything you build on it inherits that. Report which check is failing. |
 | No issue is labelled `agent-ready` | The queue is empty. This is a normal, successful outcome - say so and stop. |
+| You have no GitHub API access | You cannot read the queue, claim an issue, or open a pull request. See below - stop immediately, before spending any budget. |
 
 Stopping is a successful outcome. It is always better than guessing.
+
+### Check GitHub access first, before anything else
+
+This run depends on the GitHub API for three separate things: reading the
+queue, claiming an issue with the `agent-wip` label, and opening the pull
+request at the end. Without it there is no way to do the job and no way to
+report that you could not.
+
+So make it your first action. Try to list the repository's open issues. If
+you have no `mcp__github__*` tools, or the call fails:
+
+**Stop right there.** Do not clone, do not read the codebase, do not start
+work you cannot hand off. Say in your summary, as the only thing you say:
+
+```
+BLOCKED: no GitHub API access. This run cannot read the queue, claim an
+issue, or open a pull request. The Routine needs the GitHub connector
+attached - see docs/AGENT-NETWORK.md.
+```
+
+A run that gets this far and stops costs almost nothing. A run that skips
+this check spends its whole budget discovering the same thing at the end,
+with nothing to show for it. That has already happened once.
 
 ## 1. Pick exactly one issue
 

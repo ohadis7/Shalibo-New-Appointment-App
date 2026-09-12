@@ -102,6 +102,23 @@ exactly what is failing, and labels the issue `agent-blocked`. A red draft with
 an honest explanation is far more useful than a green pull request that got
 there by deleting a test.
 
+## The Routine needs the GitHub connector
+
+A scheduled run is a fresh cloud session, and it only has the tools the
+Routine was created with. A Routine created without the GitHub connector
+fires a session that can read the code but cannot touch the GitHub API - no
+reading issues, no labels, no comments, no pull requests. It looks like it is
+working, spends its budget, and produces nothing.
+
+This is not hypothetical: it is how the first two test firings of this
+Routine behaved. Step 0 of the runbook now checks for it explicitly so the
+failure is loud and cheap instead of silent and expensive.
+
+If runs come back blocked on this, recreate the Routine from the Routines
+screen on claude.ai with the GitHub connector attached, or from a session
+that holds it. Everything else about the setup stays the same - the schedule,
+the prompt, and the runbook are unchanged.
+
 ## Cost control
 
 Tokens are the real constraint, so the run is bounded on purpose:
