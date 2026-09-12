@@ -78,7 +78,10 @@ If not, the agent will not manage either.
 
 ## What an overnight run does
 
-1. Reads `CLAUDE.md` and this file.
+The exact step-by-step procedure, including what to do when a run is cut off
+mid-task, lives in [`RUNBOOK-NIGHTLY.md`](RUNBOOK-NIGHTLY.md). In outline:
+
+1. Reads `CLAUDE.md`, this file, and the runbook.
 2. Lists open issues labelled `agent-ready`, skipping any labelled `agent-wip`.
 3. Picks **one**. Lowest risk first. Relabels it `agent-wip`.
 4. Branches as `agent/<issue-number>-<slug>`.
@@ -88,6 +91,11 @@ If not, the agent will not manage either.
    CI screenshot artifact.
 8. Comments on the issue with what it did and what it did not verify.
 9. Stops. It does not start a second task, and it does not merge.
+
+A run that is cut off partway through is expected rather than exceptional. It
+pushes what works, writes down on the issue what is done and what is next, and
+leaves the `agent-wip` label in place. The following run finds that stale claim
+and resumes the same branch instead of starting over.
 
 If it cannot get CI green, it opens the pull request as a **draft**, explains
 exactly what is failing, and labels the issue `agent-blocked`. A red draft with

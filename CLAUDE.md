@@ -22,6 +22,8 @@ templates at image-build time via `sed` and POSIX sh in the `Dockerfile`.
 | `scripts/booking-redirect.html` | The redirect snippet that script injects |
 | `scripts/verify-injections.sh` | Asserts every Dockerfile injection actually landed |
 | `tests/` | Playwright visual + smoke tests for `landing.html` |
+| `docs/AGENT-NETWORK.md` | How the scheduled agent network operates and why |
+| `docs/RUNBOOK-NIGHTLY.md` | The exact procedure a scheduled run follows |
 
 ## The injection contract - read this before touching the Dockerfile
 
