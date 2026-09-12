@@ -15,7 +15,14 @@
       "Read(./.env)",
       "Read(./.env.*)",
       "Read(./**/*.pem)",
-      "Read(./**/credentials)"
+      "Read(./**/credentials)",
+      "Bash(gcloud:*)",
+      "Bash(az:*)",
+      "Bash(kubectl:*)",
+      "Bash(terraform:*)",
+      "Bash(npm publish:*)",
+      "Bash(git push origin master:*)",
+      "Read(./**/id_rsa*)"
     ],
     "allow": [
       "Bash(git status:*)",
@@ -47,5 +54,6 @@
       "Bash(tail:*)",
       "Bash(wc:*)"
     ]
-  }
+  },
+  "_comment": "Guardrails for unattended runs. Deny wins over allow. The AWS CLI and build-and-push.ps1 are the ones that matter here: they reach a live booking service. Denying them outright is worth more than asking."
 }

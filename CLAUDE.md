@@ -22,8 +22,22 @@ templates at image-build time via `sed` and POSIX sh in the `Dockerfile`.
 | `scripts/booking-redirect.html` | The redirect snippet that script injects |
 | `scripts/verify-injections.sh` | Asserts every Dockerfile injection actually landed |
 | `tests/` | Playwright visual + smoke tests for `landing.html` |
-| `docs/AGENT-NETWORK.md` | How the scheduled agent network operates and why |
 | `docs/RUNBOOK-NIGHTLY.md` | The exact procedure a scheduled run follows |
+| `.claude/agents/` | The dev, qa and reviewer agents a run uses |
+
+## How agents work on this project
+
+Scheduled and console-dispatched runs follow `docs/RUNBOOK-NIGHTLY.md`. The
+shape of it: implement on a branch, run the verification floor, then the **QA
+gate**. QA returns `VERDICT: PASS` or `VERDICT: FAIL`, and no pull request is
+opened without a PASS - not even a draft. A FAIL goes back for another round.
+
+The `reviewer` agent is a second opinion, not a required step. Reach for it when
+a change touches the Dockerfile injections, the redirect, or the provider
+filter - the parts that reach paying customers.
+
+That setup comes from the Agent smith framework; the runbook and the agent
+definitions here are this project's own copies and may drift as it needs them to.
 
 ## The injection contract - read this before touching the Dockerfile
 
